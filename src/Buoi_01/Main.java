@@ -4,6 +4,8 @@ public class Main {
     public static void main(String[] args) {
         // TODO: Implement your code here
 
+        // Add comment for Git
+
         // region Project Hello World
         System.out.println("Van Anh");
 
