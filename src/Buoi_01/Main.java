@@ -1,5 +1,9 @@
 package Buoi_01;
 import java.util.Scanner;
+<<<<<<< HEAD
+=======
+
+>>>>>>> d2cdb86f2f566d5e69b62adc337155ec907f4ff0
 public class Main {
     public static void main(String[] args) {
         // TODO: Implement your code here
