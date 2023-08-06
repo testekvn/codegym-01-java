@@ -1,6 +1,6 @@
 package Buoi_02;
 
-public class Baitap0333 {
+public class Baitap03 {
     public static void main(String[] args) {
         System.out.println("Bai 3");
         for (int i = 2; i < 100; i++) {
