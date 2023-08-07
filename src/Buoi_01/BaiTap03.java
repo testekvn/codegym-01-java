@@ -117,6 +117,8 @@ public class BaiTap03 {
         if (cannang > 0 && cannang <10){
             System.out.println("Can nang ban la: " + cannang);
         }
+
+        // check
     }
 
 }
