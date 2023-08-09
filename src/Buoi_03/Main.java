@@ -5,12 +5,16 @@ import com.sun.nio.sctp.SctpStandardSocketOptions;
 public class Main {
     public static void main(String[] args) {
         // TODO: Implement your code here
+
+
         /*
         String[] arrString;
         arrString = new String[1];
         arrString[0]="Quynh";
         System.out.println("Length: "+ arrString.length);
         System.out.println("value: "+ arrString[0]);
+
+
 
          */
         //In mảng 50 phần tử ; các phần tử là số chẵn nhỏ hơn bằng 120; từ 120 đổ xuống
@@ -32,10 +36,9 @@ public class Main {
         }
         */
 
-
 //               Xây dựng chương trình: Mảng arr = {2,7,6,8,9,21,34,56,32,12,37}
-//               1. Tìm phần tử lớn nhất trong mảng và in ra thông tin (sử dụng vòng While)
-//               2. Tính tổng số đầu tiên và số cuối cùng
+//               1. Tìm phần tử lớn nhất trong mảng và in ra thông tin (sử dụng vòng While).
+//               2. Tính tổng số đầu tiên và số cuối cùng.
         int[] arrNum ={2,7,6,8,9,21,34,56,32,12,37};
         int count = 0;
         int max= arrNum[0];
@@ -48,10 +51,6 @@ public class Main {
         }
         System.out.println("Max "+ max);
         System.out.println("Sum: "+(arrNum[0]+ arrNum[arrNum.length-1]));
-
-
-
-
         }
 }
 
