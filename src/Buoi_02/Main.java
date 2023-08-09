@@ -128,6 +128,7 @@ public class Main {
                     }
                     break;
                 case 5:
+                    int chose;
                     int height;
                     int width;
                     Scanner scanner4 = new Scanner(System.in);
@@ -135,12 +136,30 @@ public class Main {
                     height = scanner4.nextInt();
                     System.out.println("Nhập chiều rộng: ");
                     width = scanner4.nextInt();
-                    for (int i=0;i<=height;i++){
-                        for(int j=0;j<=width;j++){
-                            System.out.print("* ");
-                        }
-                        System.out.println("");
+
+                    System.out.println("1. In hình cữ nhật");
+                    System.out.println("2. In hình tam giác");
+                    System.out.println("Mời bạn chọn in hình: ");
+                    chose = scanner4.nextInt();
+                    switch (chose){
+                        case 1:
+                            for (int i=0;i<=height;i++){
+                                for(int j=0;j<=width;j++){
+                                    System.out.print("* ");
+                                }
+                                System.out.println("");
+                            }
+                            break;
+                        case 2:
+                            for (int i=0;i<height;i++){
+                                for (int j=0;j<=i;j++){
+                                    System.out.print("* ");
+                                }
+                                System.out.println("");
+                            }
+                            break;
                     }
+
                     break;
                 case 6:
                     int c=0;
