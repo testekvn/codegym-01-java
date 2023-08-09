@@ -2,6 +2,9 @@ package Buoi_02;
 
 import java.util.Scanner;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         // TODO: Implement your code here
@@ -103,6 +106,74 @@ public class Main {
                 System.out.print(i+" ");
             }
         }
+
+        //region for basic
+//        for (int i = 0; i < 210 ; i++) {
+//            if (i %2 !=0){
+//                System.out.println("i la so le: " + i);
+//            }
+//        }
+        //endregion
+
+        //region foreach
+//        List<Integer> integerList = new ArrayList<>();
+//        for (int i = 0; i < 15; i++) {
+//            integerList.add(i);   //[0,1,2,..14]
+//        }
+//        System.out.println(integerList);
+//        System.out.println("List:");
+//        for (int val :integerList){
+//            System.out.print(val+" ");
+//        }
+        //endregion
+
+        //region while
+//        int count =0;
+//        System.out.println("Cac so le tu 0 den 100: ");
+//        while (count <100){
+//            if(count % 2 != 0)
+//                System.out.print(count + " ");
+//            count++;
+//        }
+        //endregion while
+
+        //region do-while
+//        int count1 =0;
+//        do {
+//            //chay o day 1 lan
+//            System.out.println(count1);
+//        }
+//        while (count1 <0);
+
+        //region foreach
+//        List<Integer> integerList = new ArrayList<>();
+//        for (int i = 0; i < 15; i++) {
+//            integerList.add(i);   //[0,1,2,..14]
+//        }
+//        System.out.println(integerList);
+//        System.out.println("List:");
+//        for (int val :integerList){
+//            System.out.print(val+" ");
+//        }
+        //endregion
+
+        //region while
+//        int count =0;
+//        System.out.println("Cac so le tu 0 den 100: ");
+//        while (count <100){
+//            if(count % 2 != 0)
+//                System.out.print(count + " ");
+//            count++;
+//        }
+        //endregion while
+
+        //region do-while
+//        int count1 =0;
+//        do {
+//            //chay o day 1 lan
+//            System.out.println(count1);
+//        }
+//        while (count1 <0);
         //endregion
     }
     //region kiem tra so nguyen to
