@@ -1,7 +1,11 @@
 package Buoi_01;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
+        numberConvert();
         // TODO: Implement your code here
 
         // Add comment for Git
@@ -150,7 +154,7 @@ public class Main {
         // region Switch case : Cấu trúc điều kiện
 
         int month = 8;
-        switch (month){
+        switch (month) {
             case 6:
                 System.out.println("Ju");
                 break;
@@ -167,5 +171,32 @@ public class Main {
 
 
         // endregion
+    }
+
+    private static void numberConvert() {
+        int N = 261;
+        String numText = "";
+        int count = 0;
+        while (true) {
+            int tmpNum = N % 10;    // So du
+            N = N / 10;
+            count++;
+            switch (count) {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+            }
+            if (N == 0) break;
+        }
+
+
+
+        // 261 -tmpNum = 1 ; N = 26
+        // 26 - tmpNum = 6; N =2
+        // 2  - tmpNum = 2; N=0
+
     }
 }
