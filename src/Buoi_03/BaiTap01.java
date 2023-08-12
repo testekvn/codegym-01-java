@@ -50,6 +50,7 @@ public class BaiTap01 {
                 arrDelUpdate[i] = arrDelUpdate[i+1];
             }
         }
+
         for (int j : arrDelUpdate) {
             System.out.print(j + " ");
         }
