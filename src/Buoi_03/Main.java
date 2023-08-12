@@ -147,8 +147,19 @@ public class Main {
         /*2. Một số được gọi là số thuận nghịch độc nếu ta đọc từ trái sang phải
          hay từ phải sang trái số đó ta vẫn nhận được một số giống nhau.
         Hãy liệt kê tất cả các số thuận nghịch độc có sáu chữ số (Ví dụ số: 558855)*/
-
-
+        System.out.println("List các số thuận nghịch độc có sáu chữ số:");
+        for (int i = 100000; i <= 999999; i++) {
+            int num = i;
+            int reverse = 0;
+            while (num != 0) {
+                int digit = num % 10;
+                reverse = reverse * 10 + digit;
+                num /= 10;
+            }
+            if (i == reverse) {
+                System.out.print(i + " ");
+            }
+        }
         //endregion
     }
 }
