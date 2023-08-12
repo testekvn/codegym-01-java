@@ -1,5 +1,8 @@
 package Buoi_03;
 import javax.lang.model.util.ElementScanner6;
+import javax.management.MBeanNotificationInfo;
+import javax.print.DocFlavor;
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -161,5 +164,76 @@ public class Main {
             }
         }
         //endregion
+
+        //region Bai3 Slack
+        //3. Viết chương trình tìm ước số chung lớn nhất, bội số chung nhỏ nhất của hai số tự nhiên a và b.
+        System.out.print("Nhap so a: ");
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        System.out.print("\nNhap so b: ");
+        int b = sc.nextInt();
+        int UCLN = UCLN(a,b);
+        int BCNN = BCNN(a, b, UCLN);
+        System.out.println("UCLN la: "+ UCLN);
+        System.out.println("BCNN la: "+ BCNN);
+        //endregion
+
+        //region Bai4 Slack
+        //4. Viết chương trình chuyển đổi một số tự nhiên ở hệ cơ số 10 thành số ở hệ cơ số b bất kì (1< b≤ 36).
+//        System.out.println("Nhap so tu nhien can chuyen doi o he co so 10: ");
+//        Scanner s4 = new Scanner(System.in);
+//        int number4 = s4.nextInt();
+//        System.out.println("Nhap he co so: ");
+//        int b4 = s4.nextInt();
+//        if ( b4 < 2 || b4 > 36){
+//            System.out.println("He co so khong hop le");
+//        }
+//        if (number4 == 0){
+//            System.out.println(number4);
+//        }
+
+        //endregion
+
+        //region Bai5 Slack
+        //5. Hãy viết chương trình tính tổng các chữ số của một số nguyên bất kỳ. Ví dụ: Số 8545604 có tổng các chữ số là: 8+5+4+5+6+0+4= 32.
+        System.out.println("Nhap so nguyen can tinh: ");
+        Scanner s5= new Scanner(System.in);
+        int number5 = s5.nextInt();
+        int sum5 = 0;
+        while (number5 > 0){
+            int num5 = number5 %10;
+            sum5 += num5;
+            number5 /=10;
+        }
+        System.out.println("Tong cac chu so cua so nguyen "+ number5 +" la: "+ sum5);
+
+        //endregion
+        //region Bai6 Slack
+        //6. Viết chương trình phân tích một số nguyên thành các thừa số nguyên tố. Ví dụ: Số 28 được phân tích thành 2 x 2 x 7
+        System.out.println("Nhap so nguyen: ");
+        Scanner s6 = new Scanner(System.in);
+        int number6 = s6.nextInt();
+        System.out.println("Phan tich so nguyen "+ number6+" thanh cac thua so nguyen to la: ");
+        for (int i = 2; i <= number6; i++){
+            while ( number6 % i == 0){
+                System.out.print(i);
+                number6 /= i;
+                if (number6 > 1) {
+                    System.out.print(" x ");
+                }
+            }
+        }
+        //endregion
+    }
+    public static int UCLN(int a, int b) {
+        while (b!= 0){
+            int temp =b;
+            b = a%b;
+            a = temp;
+        }
+        return a;
+    }
+    public static int BCNN(int a, int b, int UCLN){
+        return ((a*b)/UCLN);
     }
 }
