@@ -30,14 +30,41 @@ public class Resolved_TestBuoi5 {
                     System.out.println("Nhập tháng cần xem ngày: ");
                     int monthN = sc.nextInt();
                     switch (monthN){
-                        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-                            System.out.println("Số ngày của tháng "+monthN+" là 31 ngày!");
-                            break;
-                        case 4: case 6: case 9: case 11:
-                            System.out.println("Số ngày của tháng "+monthN+" là 30 ngày!");
+                        case 1:
+                            System.out.println("Số ngày của tháng Jan là 31 ngày!");
                             break;
                         case 2:
-                            System.out.println("Số ngày của tháng "+monthN+" là 29 ngày vào năm nhuận và 28 ngày vào năm normal!");
+                            System.out.println("Số ngày của tháng Feb là 28 ngày!");
+                            break;
+                        case 3:
+                            System.out.println("Số ngày của tháng Mar là 31 ngày!");
+                            break;
+                        case 4:
+                            System.out.println("Số ngày của tháng Apr là 30 ngày!");
+                            break;
+                        case 5:
+                            System.out.println("Số ngày của tháng May là 31 ngày!");
+                            break;
+                        case 6:
+                            System.out.println("Số ngày của tháng Jun là 30 ngày!");
+                            break;
+                        case 7:
+                            System.out.println("Số ngày của tháng Jul là 31 ngày!");
+                            break;
+                        case 8:
+                            System.out.println("Số ngày của tháng Aug là 31 ngày!");
+                            break;
+                        case 9:
+                            System.out.println("Số ngày của tháng Sep là 30 ngày!");
+                            break;
+                        case 10:
+                            System.out.println("Số ngày của tháng Oct là 31 ngày!");
+                            break;
+                        case 11:
+                            System.out.println("Số ngày của tháng Nov là 30 ngày!");
+                            break;
+                        case 12:
+                            System.out.println("Số ngày của tháng Dec là 31 ngày!");
                             break;
                         default:
                             System.out.println("Tháng nhập không hợp lệ!");
