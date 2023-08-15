@@ -4,25 +4,26 @@ import java.util.Scanner;
 
 public class Bai4 {
     public static void main(String[] args) {
-        Chuyen();
-    }
+        int N = 11;
+        int Hs = 2;
+        StringBuilder result = new StringBuilder();
+        int sd = 0;
+        while (N != 0) {
+            sd = N % Hs;
+            if (Hs > 9) {
+                result.append(sd + 55);
+            } else
+                result.append(sd);
+            N = N / Hs;
+//            System.out.print("in ra" + sd);
+            if (N < Hs) {
+//                System.out.print(N);
+                result.append(N);
+                break;
+            }
 
-    private static void Chuyen() {
-        int a, b;
-        Scanner sc = new Scanner(System.in);
-        a = sc.nextInt();
-        b = sc.nextInt();
-        String str = chuyendoi(a, b);
-        System.out.println("giá trị" + a + "chuyển đổi " +b+"");
-        xuat(str);
-
-
-    }
-
-    private static void xuat(String str) {
-    }
-
-    private static String chuyendoi(int a, int b) {
-        return null;
+        }
+        System.out.println("kq" + result.reverse());
     }
 }
+
