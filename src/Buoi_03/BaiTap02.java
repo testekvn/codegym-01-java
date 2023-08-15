@@ -42,19 +42,19 @@ public class BaiTap02 {
 
         //region So nghich doc Một số được gọi là số thuận nghịch độc nếu ta đọc từ trái sang phải hay từ phải sang trái số đó ta
         // vẫn nhận được một số giống nhau. Hãy liệt kê tất cả các số thuận nghịch độc có sáu chữ số
-        int a = 100000;
-        while (a<999999){
-            int[] arrInt = new int[6];
-            int number = a;
-            for (int i = 5; i >= 0 ; i--) {
-                arrInt[i] = number % 10;
-                number = number / 10;
-            }
-            if (arrInt[0] == arrInt[5] && arrInt[1]== arrInt[4] && arrInt[2] == arrInt[3]){
-                System.out.println(arrInt[0] + "" + arrInt[1] + arrInt[2] + arrInt[3] + arrInt[4] + arrInt[5]);
-            }
-            a++;
-        }
+//        int a = 100000;
+//        while (a<999999){
+//            int[] arrInt = new int[6];
+//            int number = a;
+//            for (int i = 5; i >= 0 ; i--) {
+//                arrInt[i] = number % 10;
+//                number = number / 10;
+//            }
+//            if (arrInt[0] == arrInt[5] && arrInt[1]== arrInt[4] && arrInt[2] == arrInt[3]){
+//                System.out.println(arrInt[0] + "" + arrInt[1] + arrInt[2] + arrInt[3] + arrInt[4] + arrInt[5]);
+//            }
+//            a++;
+//        }
 
         //endregion
 
