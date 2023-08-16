@@ -1,31 +1,61 @@
 package Buoi_05;
 
+import java.util.Scanner;
+
 public class Cau2 {
     public static void main(String[] args) {
-        int N = 100;
-        int Num = 0;
-        for (int i = 1; i <= N; i++) {
-            if (i % 2 == 1) {
-                System.out.println("in re các số lẻ " +i);
+        //region tổng số chẵn
+        int N = 0;
+        for (int i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                N += i;
             }
-            Num += i;
-
         }
-        for( int a = 2; a <= N; a++){
-            if(a%2==0){
-                System.out.println("In ra các số chẵn" +a);
 
+        System.out.println("Tổng các số chẵn là : " + N);
+        //endregion
+        //region tổng số lẻ
+        int M = 0;
+        for (int i = 1; i <= 100; i++) {
+            if (i % 2 != 0) {
+                M += i;
             }
 
         }
-        //in ra dãy số fibonacci
-        int f0 = 0;
-        int f1 = 1;
-        int f2 = 1;
-        for(int i = 0 ; i<100; i++){
-            System.out.print(i+"");
-
+        System.out.println("Tổng các số lẻ là : " + M);
+        //endregion
+        //region Giai thừa
+        System.out.println("Tính giai thừa của số: ");
+        Scanner scanner2 = new Scanner(System.in);
+        int Number = scanner2.nextInt();
+        long fac = 1;
+        for (int i = 1; i <= Number; i++) {
+            fac = fac * i;
         }
+        System.out.println("Giai thừa của " + Number + " là: " + fac);
+        //endregion
+        //region In ra số chia cho 7 thì dừng
+        int num=0;
+        System.out.println("In ra toàn bộ và dừng lại khi chia hết cho 7 là:");
+        while (num>=0){
+            num++;
+            System.out.println(" "+num);
+            if (num%7==0)
+                break;
+        }
+        //endregion
+        //region in ra toàn bộ các số trừ các số kết thúc có đơn vị là 0
+        System.out.println("Các số là :");
+        for(int Num = 0;Num<=100;Num++){
+            if(Num%10!=0){
+                System.out.println("kết quả là "+Num);
+            }
+        }
+        //endregion
     }
 
+
 }
+
+
+
