@@ -19,7 +19,7 @@ public class Bai3 {
             } else {
                 System.out.println("Phương trình có một nghiệm x= " + (-c / b));
             }
-    }else {
+            }else {
             float delta = b*b - 4*a*c;
             float x1;
             float x2;
