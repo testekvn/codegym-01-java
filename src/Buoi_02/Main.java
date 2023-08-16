@@ -201,6 +201,7 @@ public class Main {
                         if (cout == 0 && num > 1)
                             System.out.println(""+ num);
                     }
+                    break;
                 default:
                     System.out.println("Tạm biệt");
                     cont = false;

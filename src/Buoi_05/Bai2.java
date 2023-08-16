@@ -14,8 +14,7 @@ public class Bai2 {
             System.out.println("4. In ra toàn bộ dãy số và dừng lại khi có số nào đó chia hết cho 7`");
             System.out.println("5. In ra toàn bộ các dãy số trừ các số kết thúc (có số đơn vị) là số 0");
             System.out.println("0. Exit");
-            System.out.println("Enter your choice: ");
-            System.out.println("Mời bạn chọn từ 0-3:");
+            System.out.println("Mời bạn chọn từ 0-5:");
             choice = scanner.nextInt();
             switch (choice) {
                 case 1:
@@ -47,14 +46,17 @@ public class Bai2 {
                     System.out.println("Giai thừa của " + N + " là: " + giaiThua);
                     break;
                 case 3:
-                    int m=100, num1 = 0, num2 = 1;
+                    System.out.println("Mời bạn nhập số N: ");
+                    Scanner scanner3 = new Scanner(System.in);
+                    int m = scanner3.nextInt();
+                    int num1 = 0, num2 = 1;
                     System.out.print("Chuỗi Fibonacci trong  là: ");
                     while (true){
                         System.out.print(num1+" ");
                         int num3 = num1 + num2;
                         num1 = num2;
                         num2 = num3;
-                        if (num1>100)break;
+                        if (num1>m)break;
                     }
                     break;
                 case 4:
