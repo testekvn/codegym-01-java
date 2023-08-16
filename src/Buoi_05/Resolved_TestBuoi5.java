@@ -105,12 +105,21 @@ public class Resolved_TestBuoi5 {
                             }
 
                             int num1 = 1, num2 =1, num3 = num1+num2;
-                            System.out.print("\nIn ra dãy số fibonacci có trong "+N+ ": \n"+ num1+" "+num2+" ");
+                            //Dùng While
+                            System.out.print("\n(While)In ra dãy số fibonacci có trong "+N+ ": \n"+ num1+" "+num2+" ");
                             while (num3<N){
                                 System.out.printf(num3+" ");
                                 num1 = num2;
                                 num2 = num3;
                                 num3 = num1+num2;
+                            }
+                            //Dùng for
+                            int numf1= 1, numf2 =1;
+                            System.out.print("\n(For)In ra dãy số fibonacci có trong "+N+ ": \n"+ numf1+" "+numf2+" ");
+                            for (int numf = numf1+numf2; numf<N; numf = numf1+numf2){
+                                System.out.print(numf+ " ");
+                                numf1 = numf2;
+                                numf2 = numf;
                             }
 
                             System.out.println("\nIn ra toàn bộ các dãy số trừ các số kết thúc (có số đơn vị) là số 0: ");
