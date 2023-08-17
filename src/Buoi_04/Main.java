@@ -4,6 +4,46 @@ public class Main {
     public static void main(String[] args) {
         // TODO: Implement your code here
 
+        //region Phan tich thua so
+        int N = 178;
+        int heso = 16;
+        StringBuilder result = new StringBuilder();
+        while (N > 0) {
+            int sodu = N % heso;
+            if (heso > 9 && sodu > 9) {
+                result.append((char) (sodu + 55));
+            } else result.append(sodu);
+            N = N / heso;
+            if (N < heso) {
+                if (heso > 9 && N > 9) {
+                    result.append((char) (N + 55));
+                } else result.append(sodu);
+                break;
+            }
+        }
+
+        System.out.println("Final Result: " + result.reverse());
+
+        //region improve
+        N = 178;
+        result = new StringBuilder();
+        while (true) {
+            String temp = String.valueOf(N % heso);
+            if ((N % heso) > 9) temp = String.valueOf((char) (N % heso + 55));
+            result.append(temp);
+            N = N / heso;
+            if (N < heso) {
+                result.append((heso > 9 && N > 9) ? String.valueOf((char) (N + 55)) : N);
+                break;
+            }
+        }
+        System.out.println("Final Result 2: " + result.reverse());
+
+        // end
+
+        //endregion
+        System.out.println("\n\n============");
+
         String name = " Vân Anh ";
         String comment = " Một cô gái xinh đẹp!!!";
 
@@ -59,7 +99,7 @@ public class Main {
         System.out.println("New: " + stringBuilder);
 
         String strRe = "Van Anh - Automation Engineer";
-        strRe =strRe.replace("Van Anh", "Minh");
+        strRe = strRe.replace("Van Anh", "Minh");
         System.out.println(strRe);
         for (int i = 10; i < 100; i++) {
             StringBuilder builder = new StringBuilder(String.valueOf(i));
