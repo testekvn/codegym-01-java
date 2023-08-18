@@ -20,12 +20,13 @@ public class Animal {
         if(type.equalsIgnoreCase("cat")){
             System.out.println("Đây là cat và nó kêu: meo meo !");
         }
-        if (type.equalsIgnoreCase("dog")) {
+        else if (type.equalsIgnoreCase("dog")) {
             System.out.println("Đây là dog và nó kêu: gâu gâu !");
         }
-        if (type.equalsIgnoreCase("duck")) {
+        else if (type.equalsIgnoreCase("duck")) {
             System.out.println("Đây là duck và nó kêu: cạc cạc !");
         }
+        else System.out.println("Đây là Animal vô thanh !");
     }
 
     //Lấy loại Animal
@@ -73,15 +74,15 @@ public class Animal {
     public static void main(String[] args) {
         //Khởi tạo Cat: Without param trong constructor
         Animal Cat = new Animal();
-        System.out.println("Cat Info: "+ Cat.getType()+ "-"+ Cat.getWeight()+"-"+ Cat.getHeight());
+        System.out.println("Cat Info: "+ "Type: "+Cat.getType()+ " - "+ "Weight: "+Cat.getWeight()+" - "+ "Height: "+ Cat.getHeight());
 
         //Khởi tạo Dog: With param "type" trong constructor
         Animal Dog = new Animal("Red dog");
-        System.out.println("Dog Info: "+ Dog.getType()+ "-"+ Dog.getWeight()+"-"+ Dog.getHeight());
+        System.out.println("Dog Info: "+ "Type: "+Dog.getType()+ " - "+ "Weight: "+Dog.getWeight()+" - "+ "Height: "+ Dog.getHeight());
 
         //Khởi tạo Duck: With all params
         Animal Duck = new Animal("G Ducky", "5kg", "50 cm");
-        System.out.println("Duck Info: "+ Duck.getType()+ "-"+ Duck.getWeight()+"-"+ Duck.getHeight());
+        System.out.println("Duck Info: "+ "Type: "+Duck.getType()+ " - "+ "Weight: "+Duck.getWeight()+" - "+ "Height: "+ Duck.getHeight());
 
         System.out.println();
 
@@ -97,13 +98,16 @@ public class Animal {
         System.out.println();
 
         //Cập nhật phương thức makeSound
+        System.out.print("Animal1: ");
         Cat.setType("cat");
         Cat.makeSound(Cat.getType());
 
+        System.out.print("Animal2: ");
         Dog.setType("dog");
         Dog.makeSound(Dog.getType());
 
-        Duck.setType("duck");
+        System.out.print("Animal3: ");
+        //Duck.setType("duck");
         Duck.makeSound(Duck.getType());
     }
 }
