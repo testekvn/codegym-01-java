@@ -3,9 +3,9 @@ package Buoi_06;
 import java.sql.SQLOutput;
 
 public class Animal {
-    String type;
-    String weight;
-    String height;
+    private String type;
+    private String weight;
+    private String height;
 
     //Hành động ăn
     public void eat(){
