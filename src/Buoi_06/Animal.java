@@ -17,13 +17,13 @@ public class Animal {
     }
     //Hành động kêu
     public void makeSound(String type){
-        if(type == "cat"){
+        if(type.equalsIgnoreCase("cat")){
             System.out.println("Đây là cat và nó kêu: meo meo !");
         }
-        if (type == "Dog") {
+        if (type.equalsIgnoreCase("dog")) {
             System.out.println("Đây là dog và nó kêu: gâu gâu !");
         }
-        if (type == "Duck") {
+        if (type.equalsIgnoreCase("duck")) {
             System.out.println("Đây là duck và nó kêu: cạc cạc !");
         }
     }
@@ -97,8 +97,13 @@ public class Animal {
         System.out.println();
 
         //Cập nhật phương thức makeSound
-        Cat.setType("Cat");
-        System.out.println("Cat Info: "+ Cat.getType()+ "-"+ Cat.getWeight()+"-"+ Cat.getHeight());
+        Cat.setType("cat");
+        Cat.makeSound(Cat.getType());
 
+        Dog.setType("dog");
+        Dog.makeSound(Dog.getType());
+
+        Duck.setType("duck");
+        Duck.makeSound(Duck.getType());
     }
 }
