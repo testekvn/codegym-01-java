@@ -49,14 +49,13 @@ public class Bai2 {
                     System.out.println("Mời bạn nhập số N: ");
                     Scanner scanner3 = new Scanner(System.in);
                     int m = scanner3.nextInt();
-                    int num1 = 0, num2 = 1;
+                    int num1 = 1, num2 = 1, num3 =0;
                     System.out.print("Chuỗi Fibonacci trong  là: ");
-                    while (true){
-                        System.out.print(num1+" ");
-                        int num3 = num1 + num2;
+                    System.out.print(num1+" "+ num2);
+                    while ((num3 = num1 + num2)<=m){
+                        System.out.print(" "+ num3);
                         num1 = num2;
                         num2 = num3;
-                        if (num1>m)break;
                     }
                     break;
                 case 4:

@@ -1,0 +1,81 @@
+package Buoi_06;
+
+public class Animal {
+    String type;
+    String weight;
+    String height;
+    public void eat(){
+
+    }
+    public  void play(){
+
+    }
+    public  void  makeSound(){
+        if (type.equals("cat")){
+            System.out.println("Meo meo");
+        }
+        if(type.equals("dog")){
+            System.out.println("Gâu gâu");
+        }
+        if(type.equals("duck")){
+            System.out.println("Cạc Cạc");
+        }
+    }
+
+    public void setType(String type) {
+
+        this.type = type;
+    }
+
+    public String getType() {
+
+        return type;
+    }
+
+    public String getHeight() {
+        return height;
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+    public void setWeight(String weight) {
+
+        this.weight = weight;
+    }
+
+    public void setHeight(String height) {
+        this.height = height;
+    }
+
+    public Animal(){
+//        System.out.println("");
+
+    }
+    public  Animal(String type){
+        System.out.println("dogType: "+type);
+
+    }
+    public  Animal(String type, String weight, String height){
+        System.out.println("duckType: "+type+" duckWeight: "+weight+" duckHeight: "+height);
+
+    }
+
+    public static void main(String[] args) {
+        Animal cat = new Animal();
+        Animal dog = new Animal( "redBull");
+        Animal duck = new Animal("duckSky","1kg","20cm");
+        cat.setType("cat");
+        System.out.println("New catType: "+ cat.getType());
+        dog.setWeight("20kg");
+        dog.setHeight("90cm");
+        System.out.println("New dogWeight: "+dog.getWeight()+" New dogHeight: "+dog.getHeight());
+        dog.setType("dog");
+        duck.setType("duck");
+        cat.makeSound();
+        dog.makeSound();
+        duck.makeSound();
+    }
+
+}
