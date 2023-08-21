@@ -5,17 +5,17 @@ import java.sql.SQLOutput;
 public class Animal {
     String type;
     double height, weight;
-    private String setType;
 
     public void eat(){}
     public void play(){}
-    public void makeSound(){}
+
     public Animal(){
         type = "Cat";
     }
     public Animal(String type){
         this.type = type;
     }
+
     public Animal(String type, double weight, double height){
         this.type = type;
         this.weight = weight;
@@ -46,9 +46,10 @@ public class Animal {
         this.weight = weight;
     }
 
+
     public static void main(String[] args) {
         Animal animalCat = new Animal();
-        Animal animalDog = new Animal("Cat");
+        Animal animalDog = new Animal("Dog");
         Animal animalDuck = new Animal("Duck", 1.2, 50);
 
         //region Print infor
@@ -72,6 +73,28 @@ public class Animal {
 
         // endregion
 
-    }
 
+        //region makeSound
+        animalCat.setType("Cat"); // set tyoe co doi tuong
+        animalCat.makeSound(animalCat.getType()); // goi ham de in ra tieng keu
+
+        animalDog.setType("Dog");
+        animalDog.makeSound(animalDog.getType());
+
+        animalDuck.setType("duck");
+        animalDuck.makeSound(animalDuck.getType());
+        //endregion
+
+
+
+    }
+    public void makeSound(String type){
+        if (type.equalsIgnoreCase("cat")) {
+            System.out.println("Con " + type + " keu meow meow");
+        } else if (type.equalsIgnoreCase("dog")) {
+            System.out.println("Con " + type + " keu gau gau");
+        } else if (type.equalsIgnoreCase("duck")) {
+            System.out.println("Con "+ type + " keu vit vit");
+        } else System.out.println("nothing");
+    }
 }
