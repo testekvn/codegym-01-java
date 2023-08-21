@@ -14,10 +14,10 @@
 //            {
 //                if (num % i == 0)
 //                {
-//                    cout++;
+//                    count++;
 //                }
 //            }
-//            if (cout == 0 && num > 1)
+//            if (count == 0 && num > 1)
 //                System.out.print(" "+ num);
 //        }
 //

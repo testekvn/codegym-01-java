@@ -52,6 +52,23 @@ public class Cau2 {
             }
         }
         //endregion
+        //region fibo
+        int number=99;
+        int firstNum = 1 , secondNum = 1 , sum=0;
+//        System.out.print(firstNum+""+secondNum);
+//        for(int i =0; i<number;i++){
+//            sum = firstNum+secondNum;
+//            if(sum>number) break;
+//            System.out.println(""+sum);
+//            firstNum = secondNum;
+//            secondNum = sum;
+        while((sum = firstNum+secondNum ) <= number){
+            System.out.print(""+sum);
+            firstNum = secondNum;
+            secondNum = sum;
+        }
+
+        //endregion
     }
 
 
