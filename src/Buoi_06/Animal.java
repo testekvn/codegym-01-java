@@ -2,6 +2,7 @@ package Buoi_06;
 
 import java.sql.SQLOutput;
 
+// TODO: 22/08/2023 Adding comment for each methods 
 public class Animal {
     String type;
     double height, weight;
@@ -96,5 +97,7 @@ public class Animal {
         } else if (type.equalsIgnoreCase("duck")) {
             System.out.println("Con "+ type + " keu vit vit");
         } else System.out.println("nothing");
+
+        // TODO: 22/08/2023 Should use switch-case 
     }
 }
