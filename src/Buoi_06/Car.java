@@ -1,9 +1,9 @@
 package Buoi_06;
 
 public class Car {
-    String Name;
-    String Color;
-    String Type;
+    String Name;        // Vincent: Tuân thủ coding convention - name
+    String Color;       // Tương tự : color
+    String Type;        // Tương tự: color
     public Car(){
         System.out.println("This is car");
     }
@@ -16,6 +16,8 @@ public class Car {
         System.out.println(" Name " +Name+ " Color " +Color);
 
     }
+
+    // FIXME: 22/08/2023 Tuân thủ coding convention   public Car(String name , String color, String type){
     public Car(String Name , String Color, String Type){
         System.out.println(" this ís car " +Name+ " màu " +Color+ " SportLine ");
 
