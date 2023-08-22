@@ -2,6 +2,7 @@ package Buoi_06;
 
 import java.sql.SQLOutput;
 
+// TODO: 22/08/2023 Add comment for all methods 
 public class Animal {
     private String type;
     private String weight;
@@ -27,6 +28,7 @@ public class Animal {
             System.out.println("Đây là duck và nó kêu: cạc cạc !");
         }
         else System.out.println("Đây là Animal vô thanh !");
+        // TODO: 22/08/2023 Should use switch case 
     }
 
     //Lấy loại Animal
