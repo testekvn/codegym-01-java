@@ -11,7 +11,7 @@ public class Animal {
     public  void play(){
 
     }
-    public  void  makeSound(){
+    public  void  makeSound(String type){
         if (type.equals("cat")){
             System.out.println("Meo meo");
         }
@@ -35,10 +35,12 @@ public class Animal {
     }
 
     public String getHeight() {
+
         return height;
     }
 
     public String getWeight() {
+
         return weight;
     }
 
@@ -48,6 +50,7 @@ public class Animal {
     }
 
     public void setHeight(String height) {
+
         this.height = height;
     }
 
@@ -69,15 +72,16 @@ public class Animal {
         Animal dog = new Animal( "redBull");
         Animal duck = new Animal("duckSky","1kg","20cm");
         cat.setType("cat");
-        System.out.println("New catType: "+ cat.getType());
+        System.out.println("newCatType: "+ cat.getType());
         dog.setWeight("20kg");
         dog.setHeight("90cm");
-        System.out.println("New dogWeight: "+dog.getWeight()+" New dogHeight: "+dog.getHeight());
+        System.out.println("newDogWeight: "+dog.getWeight()+" newDogHeight: "+dog.getHeight());
         dog.setType("dog");
         duck.setType("duck");
-        cat.makeSound();
-        dog.makeSound();
-        duck.makeSound();
+        cat.makeSound(cat.type);
+        dog.makeSound(dog.type);
+        duck.makeSound(duck.type);
+
     }
 
 }
