@@ -40,7 +40,22 @@ public class Main {
 
         // Call a static method
         Person.printInfo();
+        System.out.println("----------");
+        staticPer.getAddPrivate();
 
+        //endregion
+
+        //region Access Modifier
+        System.out.println("================ Access Modifier ================");
+        Person accessPer = new Person("Access");
+//        accessPer.getDob();
+//        accessPer.dob;
+        //endregion
+
+        //region Ke thua
+        System.out.println("================ Ke Thua ================");
+        SportCar sportCar = new SportCar(500);
+        sportCar.run();
         //endregion
     }
 

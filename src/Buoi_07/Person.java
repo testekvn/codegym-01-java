@@ -1,9 +1,11 @@
 package Buoi_07;
 
 public class Person {
+
     public static String addStatic = "Ho Chi Minh";
     String name;
     String addPrivate = "Ha Noi";
+    private String dob;
 
     public Person(String name) {
         this.name = name;
@@ -14,7 +16,14 @@ public class Person {
         System.out.println("This is static variable");
     }
 
+    private String getDob() {
+        return this.dob;
+    }
+
     public String getAddPrivate() {
+        addStatic = "New Static";
+        System.out.println("Demo Non - Static: " + addStatic);
+        printInfo();
         return addPrivate;
     }
 
