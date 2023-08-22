@@ -1,5 +1,6 @@
 package Buoi_06;
 
+// TODO: 22/08/2023 Adding the comment for each method 
 public class Animal {
     String type;
     String weight;
@@ -20,6 +21,7 @@ public class Animal {
         if(type.equals("duck")){
             System.out.println("Cạc Cạc");
         }
+        // TODO: 22/08/2023 Should user switch-case 
     }
 
     public void setType(String type) {
