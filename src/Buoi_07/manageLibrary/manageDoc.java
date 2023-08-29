@@ -22,4 +22,11 @@ public class manageDoc {
 //        newsPaper.displayDoc();
         System.out.println(listDoc);
     }
+    //Buoi_07.manageLibrary.book@70177ecd > thieu ham toString
+    @Override
+    public String toString() {
+        return "manageDoc{" +
+                "listDoc=" + listDoc +
+                '}';
+    }
 }
