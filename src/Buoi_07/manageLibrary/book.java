@@ -23,5 +23,6 @@ public class book extends document{
         super.displayDoc();
         System.out.println("Author: "+ authorName);
         System.out.println("Issue month: "+ pageNum);
+        System.out.println("==============================================");
     }
 }

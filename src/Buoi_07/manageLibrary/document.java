@@ -19,7 +19,7 @@ Tìm kiếm tài liệu theo loại: Sách, tạp chí, báo.
 
  */
 public class document {
-    static int docCode;           //Mã tài liệu
+    int docCode;           //Mã tài liệu
     String publisherName;  //Nhà xuất bản
     int issueNum;          //Số phát hành
 

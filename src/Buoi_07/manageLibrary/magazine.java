@@ -17,4 +17,10 @@ public class magazine extends document{
         return issueMonth;
     }
 
+    public void displayDoc(){
+        super.displayDoc();
+        System.out.println("Type magazine: " + typeMagazine);
+        System.out.println("Issue month: "+ issueMonth);
+        System.out.println("==============================================");
+    }
 }

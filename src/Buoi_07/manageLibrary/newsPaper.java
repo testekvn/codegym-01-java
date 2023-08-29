@@ -1,13 +1,13 @@
 package Buoi_07.manageLibrary;
 
 public class newsPaper extends document{
-    int issueDay;  //Ngày phát hành
+    String issueDay;  //Ngày phát hành
 
-    public newsPaper(int docCode, String publisherName, int issueNum, int issueDay){
+    public newsPaper(int docCode, String publisherName, int issueNum, String issueDay){
         super(docCode, publisherName, issueNum);
         this.issueDay = issueDay;
     }
-    public int getIssueDay() {
+    public String getIssueDay() {
         return issueDay;
     }
 
@@ -15,5 +15,6 @@ public class newsPaper extends document{
     public void displayDoc() {
         super.displayDoc();
         System.out.println("Issue day: "+ issueDay);
+        System.out.println("==============================================");
     }
 }

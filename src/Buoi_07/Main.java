@@ -1,6 +1,10 @@
 package Buoi_07;
 
 import Buoi_07.James.Cylinder;
+import Buoi_07.manageLibrary.*;
+
+import java.util.ArrayList;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -37,6 +41,13 @@ public class Main {
         cylinder.displayCircle();
         //endregion
 
+        //region Bai tap quan ly sach
+        manageDoc manageDoc = new manageDoc();
+        manageDoc.addDocument(new book(10, "NXB Kim Dong", 1, "Nam Cao", 100));
+        manageDoc.addDocument(new magazine(20, "NXB Alpha", 2, "Thoi Trang", 2));
+        manageDoc.addDocument(new newsPaper(30, "NXB Giao Duc", 3, "08/29/2023"));
+        manageDoc.displayDoc();
+        //endregion
 
     }
 }
