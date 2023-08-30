@@ -1,6 +1,8 @@
 package Buoi_06;
 
-public class oTo4 {   //class (doi tuong)
+public class oTo4 {
+    public oTo4() {
+    }   //class (doi tuong)
     public void oTo1() // Thuoc tinh
     {
         String name;
