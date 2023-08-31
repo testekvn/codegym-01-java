@@ -23,15 +23,4 @@ public class magazine extends document{
         System.out.println("Issue month: "+ issueMonth);
         System.out.println("==============================================");
     }
-
-    @Override
-    public String toString() {
-        return "magazine{" +
-                "typeMagazine='" + typeMagazine + '\'' +
-                ", issueMonth=" + issueMonth +
-                ", docCode=" + docCode +
-                ", publisherName='" + publisherName + '\'' +
-                ", issueNum=" + issueNum +
-                '}';
-    }
 }

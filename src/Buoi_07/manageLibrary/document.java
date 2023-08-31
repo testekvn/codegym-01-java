@@ -49,4 +49,13 @@ public class document {
         System.out.println("Publisher name: "+ publisherName);
         System.out.println("Issue number: "+ issueNum);
     }
+
+    @Override
+    public String toString() {
+        return "document{" +
+                "docCode=" + docCode +
+                ", publisherName='" + publisherName + '\'' +
+                ", issueNum=" + issueNum +
+                '}';
+    }
 }
