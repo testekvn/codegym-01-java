@@ -18,13 +18,13 @@ Hiện thị thông tin về tài liệu.
 Tìm kiếm tài liệu theo loại: Sách, tạp chí, báo.
 
  */
-public class document {
-    int docCode;           //Mã tài liệu
+public class Document {
+    int code;           //Mã tài liệu
     String publisherName;  //Nhà xuất bản
     int issueNum;          //Số phát hành
 
-    public int getDocCode() {
-        return docCode;
+    public int getCode() {
+        return code;
     }
 
     public int getIssueNum() {
@@ -35,25 +35,28 @@ public class document {
         return publisherName;
     }
 
-    public document(){
+    public Document(){
         publisherName = "NXB Giáo dục";
     }
 
-    public document(int docCode, String publisherName, int issueNum){
-        this.docCode = docCode;
+    public Document(int code, String publisherName, int issueNum){
+        this.code = code;
         this.publisherName = publisherName;
         this.issueNum = issueNum;
     }
     public void displayDoc(){
-        System.out.println("Document code: "+ docCode);
+        System.out.println("Document code: "+ code);
         System.out.println("Publisher name: "+ publisherName);
         System.out.println("Issue number: "+ issueNum);
     }
 
+    public String getType(){
+        return "Document";
+    }
     @Override
     public String toString() {
-        return "document{" +
-                "docCode=" + docCode +
+        return "Document{" +
+                "code=" + code +
                 ", publisherName='" + publisherName + '\'' +
                 ", issueNum=" + issueNum +
                 '}';

@@ -1,11 +1,11 @@
 package Buoi_07.manageLibrary;
 
-public class book extends document{
+public class Book extends Document {
     String authorName; // Tác giả
     int pageNum;       // Số trang
 
-    public book(int docCode, String publisherName, int issueNum, String authorName, int pageNum){
-        super(docCode, publisherName, issueNum);
+    public Book(int code, String publisherName, int issueNum, String authorName, int pageNum){
+        super(code, publisherName, issueNum);
         this.authorName = authorName;
         this.pageNum = pageNum;
     }
@@ -28,12 +28,17 @@ public class book extends document{
 
     @Override
     public String toString() {
-        return "book{" +
+        return "Book{" +
                 "authorName='" + authorName + '\'' +
                 ", pageNum=" + pageNum +
-                ", docCode=" + docCode +
+                ", code=" + code +
                 ", publisherName='" + publisherName + '\'' +
                 ", issueNum=" + issueNum +
                 '}';
+    }
+
+    @Override
+    public String getType() {
+        return "1";
     }
 }
