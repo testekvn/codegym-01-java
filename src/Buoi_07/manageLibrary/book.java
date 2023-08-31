@@ -25,4 +25,15 @@ public class book extends document{
         System.out.println("Issue month: "+ pageNum);
         System.out.println("==============================================");
     }
+
+    @Override
+    public String toString() {
+        return "book{" +
+                "authorName='" + authorName + '\'' +
+                ", pageNum=" + pageNum +
+                ", docCode=" + docCode +
+                ", publisherName='" + publisherName + '\'' +
+                ", issueNum=" + issueNum +
+                '}';
+    }
 }

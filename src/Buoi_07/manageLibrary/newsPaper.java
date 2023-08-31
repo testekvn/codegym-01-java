@@ -17,4 +17,14 @@ public class newsPaper extends document{
         System.out.println("Issue day: "+ issueDay);
         System.out.println("==============================================");
     }
+
+    @Override
+    public String toString() {
+        return "newsPaper{" +
+                "issueDay='" + issueDay + '\'' +
+                ", docCode=" + docCode +
+                ", publisherName='" + publisherName + '\'' +
+                ", issueNum=" + issueNum +
+                '}';
+    }
 }
