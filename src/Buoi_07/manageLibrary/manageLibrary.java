@@ -33,7 +33,7 @@ public class manageLibrary {
         }
         System.out.println("Danh sach tai lieu sau khi xoa tai lieu:\n"+documentList);
 
-        //4. Tim kiem tai lieu theo loai: Sach, bao, tap chi
+        //5. Tim kiem tai lieu theo loai: Sach, bao, tap chi
         System.out.println("Nhap loai tai lieu can tim kiem: ");
         String typeDoc = sc.nextLine();
         if (typeDoc.equalsIgnoreCase("sach")){
