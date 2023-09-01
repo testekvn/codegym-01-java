@@ -28,4 +28,15 @@ public class Magazine extends Document {
     public String getType() {
         return "2";
     }
+
+    @Override
+    public String toString() {
+        return "Magazine{" +
+                "typeMagazine='" + typeMagazine + '\'' +
+                ", issueMonth=" + issueMonth +
+                ", code=" + code +
+                ", publisherName='" + publisherName + '\'' +
+                ", issueNum=" + issueNum +
+                '}';
+    }
 }

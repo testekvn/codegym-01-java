@@ -22,4 +22,14 @@ public class Newspapers extends Document {
     public String getType() {
         return "3";
     }
+
+    @Override
+    public String toString() {
+        return "Newspapers{" +
+                "issueDay='" + issueDay + '\'' +
+                ", code=" + code +
+                ", publisherName='" + publisherName + '\'' +
+                ", issueNum=" + issueNum +
+                '}';
+    }
 }
