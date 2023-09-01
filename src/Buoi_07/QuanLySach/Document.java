@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Document {
 
-    String idDoc;
-    String namePublisher;
-    int numberPublish;
+    String idDoc; // id document
+    String namePublisher; // tên nhà xuất bản
+    int numberPublish; // số phát hành
 
     public String getIdDoc() {
         return idDoc;
@@ -38,6 +38,12 @@ public class Document {
         this.numberPublish = numberPublish;
     }
 
+    public void InforDoc(){ // in ra thông tin document
+        System.out.println("ID document: " + idDoc);
+        System.out.println("Publisher' name: : " + namePublisher);
+        System.out.println("Publish' number: : " + numberPublish);
+    }
+
     @Override
     public String toString() { // toString de convert chuoi ra text
         return "Document{" +
@@ -45,5 +51,9 @@ public class Document {
                 ", namePublisher='" + namePublisher + '\'' +
                 ", numberPublish=" + numberPublish +
                 '}';
+    }
+
+    public String getType(){
+        return "Document";
     }
 }
