@@ -53,12 +53,13 @@ public class GoodStudent extends Student {
     }
 
     @Override
-    public void input() {
+    public String input() {
         Scanner sc = new Scanner(System.in);
         super.input();
         System.out.println("Giải thưởng đạt được tốt nhất: ");
         bestRewardName = sc.nextLine();
         System.out.println("Điểm hệ 4: ");
         gpa = sc.nextDouble();
+        return null;
     }
 }

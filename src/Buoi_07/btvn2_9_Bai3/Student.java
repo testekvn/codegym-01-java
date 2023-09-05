@@ -94,7 +94,7 @@ public class Student {
         System.out.println("Xếp loại tốt nghiệp: " + gradeLevel);
     }
 
-    public void input() {
+    public String input() {
         int numError = 4;
         Scanner sc = new Scanner(System.in);
         System.out.println("Họ tên sinh viên: ");
@@ -128,9 +128,7 @@ public class Student {
         if (phoneNumber.length() == 10) {
             for (String phone : formOfPhoneNumber) {
                 if (phoneNumber.startsWith(phone)){
-                    return;
-                }else {
-                    System.out.println("Input files have  errors ");
+                    return phoneNumber;
                 }
             }
         }else {
@@ -140,5 +138,6 @@ public class Student {
         universityName = sc.nextLine();
         System.out.println("Xếp loại tốt nghiệp: ");
         gradeLevel = sc.nextLine();
+        return null;
     }
 }
