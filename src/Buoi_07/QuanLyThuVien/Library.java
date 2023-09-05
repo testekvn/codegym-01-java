@@ -1,7 +1,7 @@
 package Buoi_07.QuanLyThuVien;
 
 public abstract class Library {
-   private String id;
+    String id;
     String imprint;
     int issue_number;
 
@@ -39,5 +39,17 @@ public abstract class Library {
         System.out.println(" Mã Tài Liệu : "+ id);
         System.out.println(" Nhà Xuất Bản : "+ imprint);
         System.out.println(" Số Phát Hành : "+ issue_number);
+    }
+    public String getType(){
+        return "Library";
+    }
+
+    @Override
+    public String toString() {
+        return "Library{" +
+                "id='" + id + '\'' +
+                ", imprint='" + imprint + '\'' +
+                ", issue_number=" + issue_number +
+                '}';
     }
 }

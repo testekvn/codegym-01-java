@@ -45,4 +45,13 @@ public class Person  {
         this.identity_card = identity_card;
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", job='" + job + '\'' +
+                ", identity_card='" + identity_card + '\'' +
+                '}';
+    }
 }

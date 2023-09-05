@@ -10,6 +10,7 @@ public class Book extends Library {
         this.number_pages = number_pages;
     }
 
+
     public String getAuthor() {
         return author;
     }
@@ -27,10 +28,19 @@ public class Book extends Library {
 
     }
 
-    public void display() {
-        super.display();
-        System.out.println(" Tác giả : " + author);
-        System.out.println(" Số trang : " + number_pages);
+    @Override
+    public String toString() {
+        return "Book{" +
+                "author='" + author + '\'' +
+                ", number_pages=" + number_pages +
+                ", id='" + id + '\'' +
+                ", imprint='" + imprint + '\'' +
+                ", issue_number=" + issue_number +
+                '}';
     }
 
+    @Override
+    public String getType() {
+        return "1";
+    }
 }
