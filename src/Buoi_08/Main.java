@@ -41,7 +41,7 @@ public class Main {
                 tapChiList.add(sach);
             }
             System.out.println("Danh sách: \n"+tapChiList);
-            System.out.println("Nhập mã sách muốn xóa: ");
+            System.out.println("Nhập mã tạp chí muốn xóa: ");
             Scanner deleteBook = new Scanner(System.in);
             int k = deleteBook.nextInt();
             tapChiList.remove((k-1));
@@ -59,11 +59,13 @@ public class Main {
                 baoList.add(sach);
             }
             System.out.println("Danh sách: \n" + baoList);
-            System.out.println("Nhập mã sách muốn xóa: ");
+            System.out.println("Nhập mã báo muốn xóa: ");
             Scanner deleteBook = new Scanner(System.in);
             int k = deleteBook.nextInt();
             baoList.remove((k-1));
             System.out.println("Danh sách: \n" + baoList);
+        }else{
+            System.out.println("Khng có tài liệu nào trong thư viện");
         }
     }
 }

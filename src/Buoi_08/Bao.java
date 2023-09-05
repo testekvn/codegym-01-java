@@ -13,7 +13,6 @@ public class Bao extends TaiLieu{
     public Bao(){
         super();
     }
-
     public Bao(int maTaiLieu, String nhaXuatBan, int soPhatHanh, int ngayPhatHanh) {
         super(maTaiLieu, nhaXuatBan, soPhatHanh);
         this.ngayPhatHanh = ngayPhatHanh;

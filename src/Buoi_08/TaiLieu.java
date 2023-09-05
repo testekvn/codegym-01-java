@@ -40,8 +40,10 @@ public class TaiLieu {
     public void setSoPhatHanh(int soPhatHanh) {
         this.soPhatHanh = soPhatHanh;
     }
+
     Scanner scanner = new Scanner(System.in);
-    public void input(){
+
+    public void input() {
         System.out.println("Nhap ma tai lieu: ");
         maTaiLieu = Integer.parseInt(scanner.nextLine());
         System.out.println("Nhap ten nha xuat ban: ");
