@@ -5,10 +5,18 @@ import java.util.TooManyListenersException;
 public class NormalStudent extends Student {
     //region Fields NormalStudent
     int englishScore;      //điểm TOEIC
-    double entryTestScore; //điểm thi chuyên môn
+    int entryTestScore; //điểm thi chuyên môn
+
+    public int getEnglishScore() {
+        return englishScore;
+    }
+
+    public int getEntryTestScore() {
+        return entryTestScore;
+    }
 
     //endregion
-    public NormalStudent(String fullName, String dob, String sex, String phoneNumber, String universityName, String gradeLevel, int englishScore, double entryTestScore) {
+    public NormalStudent(String fullName, String dob, String sex, String phoneNumber, String universityName, String gradeLevel, int englishScore, int entryTestScore) {
         super(fullName, dob, sex, phoneNumber, universityName, gradeLevel);
         this.englishScore = englishScore;
         this.entryTestScore = entryTestScore;
@@ -39,5 +47,16 @@ public class NormalStudent extends Student {
                 ", universityName='" + universityName + '\'' +
                 ", gradeLevel='" + gradeLevel + '\'' +
                 '}';
+    }
+    @Override
+    public int compareTo(Student student) {
+        int toeicCompare = Double.compare(englishScore, student.englishScore);
+        int entryScoreComapre = Double.compare(entryTestScore, student.entryTestScore);
+        if (entryScoreComapre != 0) {
+            return -entryScoreComapre;
+        } else if (toeicCompare != 0) {
+            return -toeicCompare;
+        }
+        return this.fullName.compareTo(student.getFullName());
     }
 }

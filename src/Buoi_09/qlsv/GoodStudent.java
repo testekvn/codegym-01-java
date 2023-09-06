@@ -11,6 +11,14 @@ public class GoodStudent extends Student {
         this.bestRewardName = bestRewardName;
     }
 
+    public double getGpa() {
+        return gpa;
+    }
+
+    public void setGpa(double gpa) {
+        this.gpa = gpa;
+    }
+
     @Override
     public void ShowMyInfor() {
         System.out.println("Thông tin GoodStudent");
@@ -36,5 +44,15 @@ public class GoodStudent extends Student {
                 ", universityName='" + universityName + '\'' +
                 ", gradeLevel='" + gradeLevel + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Student student) {
+        double gpaComp = ((GoodStudent) student).getGpa();
+        int gpaCompare = Double.compare(this.gpa, student.getGpa);
+        if (gpaCompare != 0) {
+            return (int) -gpaComp;
+        }
+        return this.fullName.compareTo(student.getFullName());
     }
 }
