@@ -36,7 +36,7 @@ public class QuanLyTuyenSinh {
         Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.println("--------------Menu-------------");
-            System.out.println("1. Nhập danh sách sinh viên ứng tuyển");
+            System.out.println("1. Hiển thị danh sách sinh viên ứng tuyển");
             System.out.println("2. Hiển thị danh sách sinh viên trúng tuyển");
             System.out.println("0. Thoát");
             System.out.println("Enter your choice: ");
@@ -57,10 +57,10 @@ public class QuanLyTuyenSinh {
 
                         }
                     }
-                    if(studentsGoodList.size()<=15 && studentsNormalList.size()<=15 &&(studentsGoodList.size()+studentsNormalList.size()) <=15){
-                        System.out.println("Danh sách trúng tuyển: "+studentsGoodList +" "+studentsNormalList);
-                    }else {
-                        System.out.println("Chờ xét các điều kiện khác !!!");
+                    if((studentsGoodList.size()+studentsNormalList.size()) <=15){
+                        System.out.println("Danh sách trúng tuyển: "+studentsGoodList + studentsNormalList);
+                    }else if(studentsGoodList.size()<=15) {
+                        System.out.println("Danh sách trúng tuyển: "+studentsGoodList);
                     }
 
                 break;
