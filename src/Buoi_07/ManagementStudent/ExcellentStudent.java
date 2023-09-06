@@ -8,8 +8,8 @@ package Buoi_07.ManagementStudent;
 public class ExcellentStudent extends Student{
     float gpa;
     String bestRewardName;
-    public ExcellentStudent(String fullName, String sex, String phoneNumber, String universityName, String gradeLevel, float gpa, String bestRewardName) {
-        super(fullName, sex, phoneNumber, universityName, gradeLevel);
+    public ExcellentStudent(String fullName, String sex, String phoneNumber, String universityName, String doB, String gradeLevel, float gpa, String bestRewardName) {
+        super(fullName, sex, phoneNumber, universityName, gradeLevel, doB);
         this.bestRewardName = bestRewardName;
         this.gpa = gpa;
     }
@@ -39,9 +39,11 @@ public class ExcellentStudent extends Student{
                 ", sex='" + sex + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", universityName='" + universityName + '\'' +
+                ", date of birthday='" + doB + '\'' +
                 ", gradeLevel='" + gradeLevel + '\'' +
                 '}';
     }
+    public ExcellentStudent() { }
 
     @Override
     public void ShowMyInfor() {

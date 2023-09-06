@@ -30,10 +30,15 @@ public class BirthdayGift {
         // In ra thông tin số tiền mà V.Anh được tặng hàng năm
         System.out.println("Số tiền mà V.Anh được tặng hàng năm là:");
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            System.out.println("Năm " + entry.getKey() + ": " + entry.getValue() + " đồng");
+            if (entry.getKey() % 2 ==0){
+                System.out.println("Năm " + entry.getKey() + ": " + entry.getValue() + " đồng");
+            }
         }
         // In ra thông tin số tiền hiện có của V.Anh sau 10 năm
         System.out.println("Số tiền hiện có của V.Anh sau 10 năm là: " + money + " đồng");
     }
 }
+
+
+///
 

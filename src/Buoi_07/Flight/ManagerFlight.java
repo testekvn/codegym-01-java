@@ -95,8 +95,7 @@ public class ManagerFlight {
             sortCustomer.add(minCus); // add min vao mang moi
         }
 
-        for (Customer customer: sortCustomer
-             ) {
+        for (Customer customer: sortCustomer) {
             customer.PrintInfo();
         }
     }

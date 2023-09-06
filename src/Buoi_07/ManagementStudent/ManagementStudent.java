@@ -40,26 +40,53 @@ package Buoi_07.ManagementStudent;
  *       đến điểm TOEIC. Nếu xuất hiện ứng viên trung bình có cùng điểm TOEIC thì xét ưu tiên theo họ tên.
  */
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 public class ManagementStudent {
     public static void main(String[] args) {
-        List<Student> studentList;
+        List<Student> studentList = new ArrayList<>();// studentList chua tat ca sv nhap vao
+        List<ExcellentStudent> excellentStudentsList = new ArrayList<>();
+        List<AverageStudent> averageStudentsList = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
-        System.out.print("Nhap ho ten: ");
-        String fullName = sc.nextLine();
-        System.out.print("Ngay sinh: ");
-        Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-        String strDate = formatter.format(date);
-//        System.out.println(strDate);
-//        System.out.println(fullName);
-//        if (fullName.length() <= 50 && fullName.length()>=10){
-////            studentList.add()
-//        } else {
-//            System.out.println();
-//        }
+        System.out.print("Nhap so luong sv can tuyen: ");
+        int countApply = sc.nextInt();
+        if (countApply >0 && countApply < 3){
+            for (int i = 0; i < countApply; i++) {
+                Student student = new Student();
+                student.input();
+                studentList.add(student);
+                if (student.gradeLevel.equalsIgnoreCase("Kha gioi")){
+                    System.out.print("điểm trung bình học tập (gpa) theo thang điểm 10: ");
+                    float gpa = sc.nextFloat();
+                    System.out.println("loại học bổng (hoặc giải thưởng) cao nhất đã từng giành được (bestRewardName)");
+                    String bestRewardName = sc.nextLine();
+                    ExcellentStudent excellentStudent = new ExcellentStudent(student.fullName, student.sex, student.phoneNumber, student.universityName, student.doB, student.gradeLevel, gpa, bestRewardName);
+                    excellentStudentsList.add(excellentStudent);
+                } else {
+                    System.out.print("điểm TOEIC : ");
+                    float englishScore = sc.nextFloat();
+                    System.out.print("điểm thi đầu vào chuyên môn do công ty tổ chức thi (entryTestScore) theo thang điểm 10: ");
+                    float entryTestScore = sc.nextFloat();
+                    AverageStudent averageStudent = new AverageStudent(student.fullName, student.sex, student.phoneNumber, student.universityName, student.gradeLevel, student.doB, englishScore, entryTestScore);
+                    averageStudentsList.add(averageStudent);
+                }
+            }
+            System.out.println("Tat ca sinh vien");
+            for ( Student student: studentList){
+                student.ShowMyInfor();
+            }
+            System.out.println("Tat ca sinh vien kha gioi");
+            for (ExcellentStudent excellentStudent: excellentStudentsList){
+                excellentStudent.ShowMyInfor();
+            }
+            System.out.println("Tat ca sinh vien trung binh");
+            for (AverageStudent averageStudent: averageStudentsList){
+                averageStudent.ShowMyInfor();
+            }
+        }
+
     }
 }
