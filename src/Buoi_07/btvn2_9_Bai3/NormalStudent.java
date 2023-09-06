@@ -54,7 +54,7 @@ public class NormalStudent extends Student {
     }
 
     @Override
-    public String input() {
+    public void input() {
         super.input();
         Scanner sc = new Scanner(System.in);
         System.out.println("Điểm Toeic: ");
@@ -63,6 +63,6 @@ public class NormalStudent extends Student {
         entryTestScore = sc.nextDouble();
 
 
-        return null;
+
     }
 }
