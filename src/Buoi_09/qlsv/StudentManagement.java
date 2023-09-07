@@ -74,8 +74,46 @@ public class StudentManagement {
 //            String type = student.studentType();
 //            if (type.equalsIgnoreCase(studentType))
 //        }
-        Collections.sort(goodStudentList);
-        Collections.sort(normalStudentList);
+        //Collections.sort(goodStudentList);
+        //Collections.sort(normalStudentList);
+        //Sắp xếp sinh viên theo GPA nếu cùng GPA sắp xếp theo tên
+        goodStudentList.sort((s1, s2) -> {
+            int gpaResult = Double.compare(s2.getGpa(), s1.getGpa());
+            if (gpaResult == 0) {
+                gpaResult = s1.getFullName().compareTo(s2.getFullName());
+            }
+            return gpaResult;
+        });
+//        normalStudentList.sort((s3, s4) -> {
+//            int toeicResult = Double.compare(s4.englishScore, s3.englishScore);
+//            int entryScoreResult = Double.compare(s4.entryTestScore, s3.entryTestScore);
+//            if (entryScoreResult !=0){
+//                return entryScoreResult;
+//            } else if (toeicResult !=0) {
+//                return toeicResult;
+//            }
+//            else {
+//                return s3.getFullName().compareTo(s4.getFullName());
+//            }
+//        });
+        //Sắp xếp sinh viên theo điểm Toeic
+        normalStudentList.sort((s1, s2) -> {
+            int toeicResult = Double.compare(s2.getEnglishScore(), s1.getEnglishScore());
+            if (toeicResult == 0) {
+                toeicResult = s1.getFullName().compareTo(s2.getFullName());
+            }
+            return toeicResult;
+        });
+        //Sắp xếp sinh viên theo điểm thi đầu vào
+        normalStudentList.sort((s1, s2) -> {
+            int entryResult = Double.compare(s2.getEntryTestScore(), s1.getEntryTestScore());
+            if (entryResult == 0) {
+                entryResult = s1.getFullName().compareTo(s2.getFullName());
+            }
+            return entryResult;
+        });
+
+
         goodStudentList.forEach(e -> System.out.println(e));
         normalStudentList.forEach(e -> System.out.println(e));
         if (goodStudentList.size() > numOfStudent){
@@ -85,7 +123,7 @@ public class StudentManagement {
             }
         } else if (goodStudentList.size() <= numOfStudent) {
             System.out.println(goodStudentList);
-            for (int j = 0; j < (numOfStudent - normalStudentList.size()); j++) {
+            for (int j = 0; j < (numOfStudent - goodStudentList.size()); j++) {
                 System.out.println(normalStudentList.get(j));
             }
         }

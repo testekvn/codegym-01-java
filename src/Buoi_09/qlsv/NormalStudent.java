@@ -50,13 +50,13 @@ public class NormalStudent extends Student {
     }
     @Override
     public int compareTo(Student student) {
-        int toeicCompare = Double.compare(englishScore, student.englishScore);
-        int entryScoreComapre = Double.compare(entryTestScore, student.entryTestScore);
-        if (entryScoreComapre != 0) {
-            return -entryScoreComapre;
-        } else if (toeicCompare != 0) {
-            return -toeicCompare;
-        }
+//        int toeicCompare = Double.compare(englishScore, student.englishScore);
+//        int entryScoreComapre = Double.compare(entryTestScore, student.entryTestScore);
+//        if (entryScoreComapre != 0) {
+//            return -entryScoreComapre;
+//        } else if (toeicCompare != 0) {
+//            return -toeicCompare;
+//        }
         return this.fullName.compareTo(student.getFullName());
     }
 }

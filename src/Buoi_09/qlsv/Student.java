@@ -7,10 +7,10 @@ import java.util.Date;
 import java.util.Scanner;
 
 public abstract class Student implements Comparable<Student> {
-    protected double gpa;
-    protected int englishScore;
-    protected int entryTestScore;
-    protected double getGpa;
+    //protected double gpa;
+    //protected int englishScore;
+    //protected int entryTestScore;
+    //protected double getGpa;
     //region Fields Student
     String fullName;       //Họ tên sinh viên
     String dob;            //Ngày tháng năm sinh
@@ -165,6 +165,18 @@ public abstract class Student implements Comparable<Student> {
 
     @Override
     public int compareTo(Student student) {
+        return 0;
+    }
+
+    public double getGpa() {
+        return 0;
+    }
+
+    public int getEntryTestScore() {
+        return  0;
+    }
+
+    public int getEnglishScore() {
         return 0;
     }
 }

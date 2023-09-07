@@ -48,11 +48,11 @@ public class GoodStudent extends Student {
 
     @Override
     public int compareTo(Student student) {
-        double gpaComp = ((GoodStudent) student).getGpa();
-        int gpaCompare = Double.compare(this.gpa, student.getGpa);
-        if (gpaCompare != 0) {
-            return (int) -gpaComp;
-        }
-        return this.fullName.compareTo(student.getFullName());
+        //double gpaComp = ((GoodStudent) student).getGpa();
+//        int gpaCompare = Double.compare(this.gpa, student.getGpa);
+//        if (gpaCompare != 0) {
+//            return -gpaCompare;
+//        }
+        return fullName.compareTo(student.getFullName());
     }
 }
