@@ -1,11 +1,12 @@
 package Buoi_08.btvn.svmanagement;
+
 /**
  * Hoc sinh kha, gioi
  */
 public class GoodStudent extends Student {
     private float gpa;
     private String bestRewardName;
-
+    public GoodStudent(){}
     public GoodStudent(float gpa, String bestRewardName) {
         this.gpa = gpa;
         this.bestRewardName = bestRewardName;
@@ -21,7 +22,15 @@ public class GoodStudent extends Student {
         return gpa;
     }
 
+    /**
+     * Set gpa score in range [0,10]. Default value: 5.0
+     *
+     * @param gpa : the test score
+     */
     public void setGpa(float gpa) {
+        if (gpa < 0 || gpa > 10) {
+            gpa = 5.0f;
+        }
         this.gpa = gpa;
     }
 
@@ -37,10 +46,13 @@ public class GoodStudent extends Student {
     public String toString() {
         return "GoodStudent{" +
                 super.toString() +
-                "gpa=" + gpa +
+                ", gpa=" + gpa +
                 ", bestRewardName='" + bestRewardName + '\'' +
                 '}';
     }
 
+    public void ShowMyInfo() {
+        System.out.println(this.toString());
+    }
 
 }

@@ -6,7 +6,7 @@ package Buoi_08.btvn.svmanagement;
 public class Student {
     private String fullName;
     private String doB;
-    private String sex;
+    private String gender;
     private String phoneNumber;
     private String universityName;
     private String gradeLevel;
@@ -14,26 +14,15 @@ public class Student {
     public Student() {
     }
 
-    public Student(String fullName, String doB, String sex, String phoneNumber, String universityName, String gradeLevel) {
+    public Student(String fullName, String doB, String gender, String phoneNumber, String universityName, String gradeLevel) {
         this.fullName = fullName;
         this.doB = doB;
-        this.sex = sex;
+        this.gender = gender;
         this.phoneNumber = phoneNumber;
         this.universityName = universityName;
         this.gradeLevel = gradeLevel;
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "fullName='" + fullName + '\'' +
-                ", doB='" + doB + '\'' +
-                ", sex='" + sex + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", universityName='" + universityName + '\'' +
-                ", gradeLevel='" + gradeLevel + '\'' +
-                '}';
-    }
 
     public String getFullName() {
         return fullName;
@@ -51,12 +40,12 @@ public class Student {
         this.doB = doB;
     }
 
-    public String getSex() {
-        return sex;
+    public String getGender() {
+        return gender;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setGender(String sex) {
+        this.gender = sex;
     }
 
     public String getPhoneNumber() {
@@ -81,5 +70,20 @@ public class Student {
 
     public void setGradeLevel(String gradeLevel) {
         this.gradeLevel = gradeLevel;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "fullName='" + fullName + '\'' +
+                ", doB='" + doB + '\'' +
+                ", Gender='" + gender + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", universityName='" + universityName + '\'' +
+                ", gradeLevel='" + gradeLevel + '\'' +
+                '}';
+    }
+    public void ShowMyInfo() {
+        System.out.println(this.toString());
     }
 }
