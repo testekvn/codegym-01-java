@@ -2,6 +2,9 @@ package Buoi_08.btvn.svmanagement;
 
 import java.util.Random;
 
+/**
+ * Class to fake data
+ */
 public class DataFaker {
      Random random = new Random();
 
@@ -22,8 +25,8 @@ public class DataFaker {
     }
 
     public String getRandomFullName() {
-        String name = "John Wick";
-        return name + (random.nextInt(10));
+        String prefix = "Vincent";
+        return prefix + (random.nextInt(10));
     }
 
 }
