@@ -144,7 +144,7 @@ public class StudentManagement {
 
     /**
      * Fake Data for Testing.
-     * @return The a student list
+     * @return The student list
      */
     public static List<Student> fakeDataForTesting() {
         List<Student> students = new ArrayList<>();
