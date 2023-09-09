@@ -51,41 +51,82 @@ public class ManagementStudent {
         List<ExcellentStudent> excellentStudentsList = new ArrayList<>();
         List<AverageStudent> averageStudentsList = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
-        System.out.print("Nhap so luong sv can tuyen: ");
-        int countApply = sc.nextInt();
-        if (countApply >0 && countApply < 3){
-            for (int i = 0; i < countApply; i++) {
+        System.out.print("Nhap so luong sv: ");
+        int quantityStudent = sc.nextInt();
+        if (quantityStudent >0 && quantityStudent < 6){
+            for (int i = 0; i < quantityStudent; i++) {
                 Student student = new Student();
                 student.input();
                 studentList.add(student);
-                if (student.gradeLevel.equalsIgnoreCase("Kha gioi")){
+                if (student.gradeLevel.equalsIgnoreCase("kha") || student.gradeLevel.equalsIgnoreCase("gioi")){
                     System.out.print("điểm trung bình học tập (gpa) theo thang điểm 10: ");
-                    float gpa = sc.nextFloat();
-                    System.out.println("loại học bổng (hoặc giải thưởng) cao nhất đã từng giành được (bestRewardName)");
+                    float gpa = Float.parseFloat(sc.nextLine());
+                    System.out.println("loại học bổng (hoặc giải thưởng) cao nhất đã từng giành được (bestRewardName): ");
                     String bestRewardName = sc.nextLine();
                     ExcellentStudent excellentStudent = new ExcellentStudent(student.fullName, student.sex, student.phoneNumber, student.universityName, student.doB, student.gradeLevel, gpa, bestRewardName);
                     excellentStudentsList.add(excellentStudent);
                 } else {
                     System.out.print("điểm TOEIC : ");
-                    float englishScore = sc.nextFloat();
+                    float englishScore = Float.parseFloat(sc.nextLine());
                     System.out.print("điểm thi đầu vào chuyên môn do công ty tổ chức thi (entryTestScore) theo thang điểm 10: ");
-                    float entryTestScore = sc.nextFloat();
+                    float entryTestScore = Float.parseFloat(sc.nextLine());
                     AverageStudent averageStudent = new AverageStudent(student.fullName, student.sex, student.phoneNumber, student.universityName, student.gradeLevel, student.doB, englishScore, entryTestScore);
                     averageStudentsList.add(averageStudent);
                 }
+                System.out.println("Nhap so luong sinh vien can tuyen");
+                int quantityStudentApply = Integer.parseInt(sc.nextLine());
+                System.out.println("Danh sach sinh vien trung tuyen");
+//              SV  khá giỏi có cùng điểm GPA thì xét ưu tiên theo họ tên
+                if (quantityStudentApply <= excellentStudentsList.size()){
+                    excellentStudentsList.sort((exstuden1, exstudent2) ->{
+                        if (exstuden1.getGpa() == exstudent2.getGpa()){
+                            return exstuden1.getFullName().compareTo(exstudent2.getFullName());
+                        }
+                        return Double.compare(exstuden1.getGpa(), exstudent2.getGpa());
+                    });
+                    for (ExcellentStudent studentApply: excellentStudentsList) {
+                        studentApply.ShowMyInfor();
+                    }
+                }
+//                Nếu số lượng ứng viên là sinh viên khá giỏi ít hơn hoặc bằng số lượng cần tuyển thì nhận hết sinh viên khá giỏi.
+                if (quantityStudentApply >= excellentStudentsList.size()){
+                    for (ExcellentStudent studentApply: excellentStudentsList) {
+                        studentApply.ShowMyInfor();
+                    }
+                }
+//                Sau khi tuyển hết ứng viên khá giỏi, nếu vẫn chưa đủ số lượng cần tuyển, chương trình sẽ lấy ứng viên trung
+// *       bình. Các ứng viên trung bình được xét ưu tiên theo điểm thi đầu vào, nếu điểm thi đầu vào bằng nhau thì xét
+// *       đến điểm TOEIC. Nếu xuất hiện ứng viên trung bình có cùng điểm TOEIC thì xét ưu tiên theo họ tên.
+                if (quantityStudentApply <= averageStudentsList.size()){
+                    averageStudentsList.sort((exstuden1, exstudent2) ->{
+                        if (exstuden1.getEnglishScore() == exstudent2.getEnglishScore()){
+                            return exstuden1.getFullName().compareTo(exstudent2.getFullName());
+                        }
+                        return Double.compare(exstuden1.getEnglishScore(), exstudent2.getEnglishScore());
+                    });
+                    for (AverageStudent studentApply: averageStudentsList) {
+                        studentApply.ShowMyInfor();
+                    }
+                }
+
+
+
+
+
             }
-            System.out.println("Tat ca sinh vien");
-            for ( Student student: studentList){
-                student.ShowMyInfor();
-            }
+
+//            System.out.println("Tat ca sinh vien");
+//            for ( Student student: studentList){
+//                student.ShowMyInfor();
+//            }
             System.out.println("Tat ca sinh vien kha gioi");
             for (ExcellentStudent excellentStudent: excellentStudentsList){
                 excellentStudent.ShowMyInfor();
             }
-            System.out.println("Tat ca sinh vien trung binh");
-            for (AverageStudent averageStudent: averageStudentsList){
-                averageStudent.ShowMyInfor();
-            }
+//            System.out.println("Tat ca sinh vien trung binh");
+//            for (AverageStudent averageStudent: averageStudentsList){
+//                averageStudent.ShowMyInfor();
+//            }
         }
 
     }
