@@ -51,7 +51,8 @@
   + Phương thức: PrintInfo(In ra thông tin người), và các phương thức getter/setter
 + Xây dựng lớp Hanhkhach (mỗi hành khách được mua nhiều vé) kế thừa lớp Nguoi bổ sung thêm:
   + Thuộc tính: Danh sách Chuyenbay; int soluong (Tổng số lượng vé); 
-  + Phương thức: PrintInfo(In ra thông tin hành khách), và các phương thức getter/setter; Phương thức tính số tiền hành khách đã mua vé máy bay, phương thức đặt vé máy bay (Người dùng đặt vé và cập nhật các chuyến bay vào danh sách của người dùng); Phương thức tính tổng số tiền người dùng phải trả cho tất cả các chuyến bay
+  + Phương thức: PrintInfo(In ra thông tin hành khách), và các phương thức getter/setter; Phương thức tính tổng số tiền người dùng phải trả cho tất cả các chuyến bay
+    (nang cao: Phương thức tính số tiền hành khách đã mua vé máy bay, phương thức đặt vé máy bay (Người dùng đặt vé và cập nhật các chuyến bay vào danh sách của người dùng); )
 
 Chương trình chính:
    + Xây dựng N số chuyến bay (Thông tin chuyến bay được nhập từ bàn phím)

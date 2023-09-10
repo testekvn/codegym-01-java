@@ -164,6 +164,4 @@ public class StudentManagement {
         students.add(new NormalStudent("Nguyen Thi A", "12/12/2000", "Nam", "0350000000", "HLU", "Khá", 750, 7.5f));
         return students;
     }
-
-
 }
