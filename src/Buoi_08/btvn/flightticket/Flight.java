@@ -78,7 +78,7 @@ public class Flight {
      */
     public void addNewBooking(Booking booking) {
         // Neu so luong nguoi duoc add lon hon so luong ve, bao loi
-        if (getBookedTicket() > numberOfTicket) {
+        if ((getBookedTicket() + booking.getTicketTotalForCustomer()) > numberOfTicket) {
             throw new RuntimeException("The flight is  over, please book other.");
         }
         this.bookingList.add(booking);

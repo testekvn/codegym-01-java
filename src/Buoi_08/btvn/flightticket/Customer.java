@@ -2,7 +2,6 @@ package Buoi_08.btvn.flightticket;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Customer extends Person {
     private List<Booking> flightList;
@@ -63,8 +62,8 @@ public class Customer extends Person {
             float currentAmount = b.getTicketTotalForCustomer() * b.getFight().getPrice();
 
             // Neu ap dung ti le chiet khau va so lan khuyen mai. Can validate cac thong tin
-            if (Objects.nonNull(amountForDiscount) && result >= amountForDiscount && count <= discountNum) {
-                currentAmount *= (1-discountRate);
+            if (amountForDiscount != null && result >= amountForDiscount && count <= discountNum) {
+                currentAmount *= (1 - discountRate);
                 count++;
             }
             result += currentAmount;

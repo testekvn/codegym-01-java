@@ -14,6 +14,7 @@ public class Person {
         this.age = age;
     }
 
+
     public String getFullName() {
         return fullName;
     }
@@ -48,6 +49,6 @@ public class Person {
     }
 
     public void printInfo() {
-        System.out.println(this);
+        System.out.println(this.toString());
     }
 }
