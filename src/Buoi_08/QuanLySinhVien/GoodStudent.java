@@ -1,32 +1,36 @@
 package Buoi_08.QuanLySinhVien;
 
+import java.util.Scanner;
+
 public class GoodStudent extends Student {
-    float gpa;
-    String bestRewardName;
+    double gpa;             //Điểm trung bình học tập
+    String bestRewardName;  //Học bổng(giải thưởng)
+    //endregion
+    public GoodStudent(String fullName, String dob, String sex, String phoneNumber, String universityName, String gradeLevel, double gpa, String bestRewardName) {
+        super(fullName, dob, sex, phoneNumber, universityName, gradeLevel);
+        this.gpa = gpa;
+        this.bestRewardName = bestRewardName;
+    }
 
-
-    public float getGpa() {
+    public double getGpa() {
         return gpa;
     }
 
-    public void setGpa(int gpa) {
+    public void setGpa(double gpa) {
         this.gpa = gpa;
     }
 
-    public String getBestRewardName() {
-        return bestRewardName;
+    @Override
+    public void ShowMyInfor() {
+        System.out.println("Thông tin GoodStudent");
+        super.ShowMyInfor();
+        System.out.println("Điểm trung bình học tập: "+gpa);
+        System.out.println("Học bổng(giải thưởng): "+bestRewardName);
     }
 
-    public void setBestRewardName(String bestRewardName) {
-        this.bestRewardName = bestRewardName;
-    }
-
-    public GoodStudent(String fullName, String doB, String sex, String phoneNumber, String universityName, String gradeLevel, float gpa, String bestRewardName) {
-        super(fullName, doB, sex, phoneNumber, universityName, gradeLevel);
-        this.gpa = gpa;
-        this.bestRewardName = bestRewardName;
-
-
+    @Override
+    public String studentType() {
+        return "1";
     }
 
     @Override
@@ -35,19 +39,21 @@ public class GoodStudent extends Student {
                 "gpa=" + gpa +
                 ", bestRewardName='" + bestRewardName + '\'' +
                 ", fullName='" + fullName + '\'' +
-                ", doB=" + doB +
+                ", dob='" + doB + '\'' +
                 ", sex='" + sex + '\'' +
-                ", phoneNumber=" + phoneNumber +
+                ", phoneNumber='" + phoneNumber + '\'' +
                 ", universityName='" + universityName + '\'' +
                 ", gradeLevel='" + gradeLevel + '\'' +
                 '}';
     }
 
     @Override
-    public void ShowMyInfor() {
-        super.ShowMyInfor();
-        System.out.println("Điểm Trung Bình Học Tập: " + gpa);
-        System.out.println("Học Bổng ( giải thưởng ): " + bestRewardName);
+    public int compareTo(Student student) {
+        //double gpaComp = ((GoodStudent) student).getGpa();
+//        int gpaCompare = Double.compare(this.gpa, student.getGpa);
+//        if (gpaCompare != 0) {
+//            return -gpaCompare;
+//        }
+        return fullName.compareTo(student.getFullName());
     }
 }
-

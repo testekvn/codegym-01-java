@@ -1,5 +1,7 @@
 package Buoi_08.QuanLyVeBay;
 
+import java.util.Scanner;
+
 public class Person {
     String hoten;
     String gioitinh;
@@ -49,5 +51,15 @@ public class Person {
                 ", gioitinh='" + gioitinh + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    public void PrintInfo() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Họ và tên: ");
+        hoten = sc.nextLine();
+        System.out.println("Giới tính: ");
+        gioitinh = sc.nextLine();
+        System.out.println("Tuổi: ");
+        age = Integer.parseInt(sc.nextLine());
     }
 }

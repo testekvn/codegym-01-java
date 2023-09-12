@@ -1,30 +1,37 @@
 package Buoi_08.QuanLySinhVien;
 
+import java.util.Scanner;
+
 public class NormalStudent extends Student {
-    int englishScore;
-    float entryTestScore;
-
-
-    public NormalStudent(String fullName, String doB, String sex, String phoneNumber, String universityName, String gradeLevel, int englishScore, float entryTestScore) {
-        super(fullName, doB, sex, phoneNumber, universityName, gradeLevel);
-        this.englishScore = englishScore;
-        this.entryTestScore = entryTestScore;
-    }
+    int englishScore;      //điểm TOEIC
+    int entryTestScore; //điểm thi chuyên môn
 
     public int getEnglishScore() {
         return englishScore;
     }
 
-    public void setEnglishScore(int englishScore) {
-        this.englishScore = englishScore;
-    }
-
-    public float getEntryTestScore() {
+    public int getEntryTestScore() {
         return entryTestScore;
     }
 
-    public void setEntryTestScore(float entryTestScore) {
+    //endregion
+    public NormalStudent(String fullName, String dob, String sex, String phoneNumber, String universityName, String gradeLevel, int englishScore, int entryTestScore) {
+        super(fullName, dob, sex, phoneNumber, universityName, gradeLevel);
+        this.englishScore = englishScore;
         this.entryTestScore = entryTestScore;
+    }
+
+    @Override
+    public void ShowMyInfor() {
+        System.out.println("Thông tin NormalStudent");
+        super.ShowMyInfor();
+        System.out.println("Điểm TOEIC: "+ englishScore);
+        System.out.println("Điểm thi chuyên môn: "+entryTestScore);
+    }
+
+    @Override
+    public String studentType() {
+        return "2";
     }
 
     @Override
@@ -33,18 +40,22 @@ public class NormalStudent extends Student {
                 "englishScore=" + englishScore +
                 ", entryTestScore=" + entryTestScore +
                 ", fullName='" + fullName + '\'' +
-                ", doB=" + doB +
+                ", dob='" + doB + '\'' +
                 ", sex='" + sex + '\'' +
-                ", phoneNumber=" + phoneNumber +
+                ", phoneNumber='" + phoneNumber + '\'' +
                 ", universityName='" + universityName + '\'' +
                 ", gradeLevel='" + gradeLevel + '\'' +
                 '}';
     }
-
     @Override
-    public void ShowMyInfor() {
-        super.ShowMyInfor();
-        System.out.println("Điểm Toeic : " + englishScore);
-        System.out.println("Điểm Thi Đầu Vào :" + entryTestScore);
+    public int compareTo(Student student) {
+//        int toeicCompare = Double.compare(englishScore, student.englishScore);
+//        int entryScoreComapre = Double.compare(entryTestScore, student.entryTestScore);
+//        if (entryScoreComapre != 0) {
+//            return -entryScoreComapre;
+//        } else if (toeicCompare != 0) {
+//            return -toeicCompare;
+//        }
+        return this.fullName.compareTo(student.getFullName());
     }
 }

@@ -2,6 +2,7 @@ package Buoi_08.QuanLyVeBay;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class ChuyenBay {
     String tenchuyen;
@@ -89,4 +90,21 @@ public class ChuyenBay {
                 ", hanhkhachList=" + hanhkhachList +
                 '}';
     }
+    public ChuyenBay(){
+
+    }
+    public void PrintInfo(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Tên chuyến bay: ");
+        tenchuyen = sc.nextLine();
+        System.out.println("Ngày bay: ");
+        ngaybay = sc.nextLine();
+        System.out.println("Giá vé: ");
+        giave = Integer.parseInt(sc.nextLine());
+        System.out.println("Ký hiệu chuyến bay: ");
+        kyhieuchuyen = sc.nextLine();
+        System.out.println("Số lượng vé của chuyến bay: ");
+        soluongve = Integer.parseInt(sc.nextLine());
+    }
+
 }
