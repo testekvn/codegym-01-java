@@ -11,7 +11,7 @@ public class HouseHold {
 
     public int getQuantityOfHouseHold() {
         return this.personList.size();
-    }
+    } // lay ra so luong thanh vien
 
     public void setQuantityOfHouseHold(int quantityOfHouseHold) {
         this.quantityOfHouseHold = quantityOfHouseHold;
@@ -27,7 +27,7 @@ public class HouseHold {
 
     public HouseHold(String numberHouseHold, List<Person> personList ){
         this.numberHouseHold = numberHouseHold;
-        if (personList == null){ // nếu ds mem = null, thì personList = ArrayList rỗng
+        if (personList == null){ // nếu ds thanhvien = null, thì personList = ArrayList rỗng
             personList = new ArrayList<>();
         }
         this.personList = personList;
@@ -42,8 +42,8 @@ public class HouseHold {
                 ", personList=" + personList +
                 '}';
     }
-    public void addPerson(Person person){
-        this.personList.add(person);
+    public void addPerson(Person person){ // contructor them thanh vien
+        this.personList.add(person); // this the hien cho doi tuong
         this.quantityOfHouseHold = this.personList.size();
     }
 }

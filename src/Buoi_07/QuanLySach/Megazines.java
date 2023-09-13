@@ -21,7 +21,7 @@ public class Megazines extends Document {
 
     @Override
     public String toString() {
-        return "Megazines{" +
+        return "Magazines{" +
                 "monthPublish='" + monthPublish + '\'' +
                 ", idDoc='" + idDoc + '\'' +
                 ", namePublisher='" + namePublisher + '\'' +
