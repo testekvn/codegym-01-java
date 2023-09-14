@@ -1,13 +1,11 @@
 package Buoi_07.btvn2_9_Bai3;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class QuanLyTuyenSinh {
     public static void main(String[] args) {
-        List<Student> studentList = null;
-        studentList = new ArrayList<>();
+        List<GoodStudent> goodStudentList = new ArrayList<>();
+        List<NormalStudent> normalStudentList = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập số lượng sinh viên ứng tuyển: ");
         int n = scanner.nextInt();
@@ -23,12 +21,12 @@ public class QuanLyTuyenSinh {
                 if (choice.equalsIgnoreCase("y")) {
                     GoodStudent goodStudent = new GoodStudent();
                     goodStudent.input();
-                    studentList.add(goodStudent);
+                    goodStudentList.add(goodStudent);
                 }
                 else {
                     NormalStudent normalStudent = new NormalStudent();
                     normalStudent.input();
-                    studentList.add(normalStudent);
+                    normalStudentList.add(normalStudent);
                 }
             }
         }
@@ -42,27 +40,28 @@ public class QuanLyTuyenSinh {
             System.out.println("Enter your choice: ");
             System.out.println("Mời bạn chọn từ 0-3:");
             chon = sc.nextInt();
-            List<Student> studentsGoodList = new ArrayList<>();
-            List<Student> studentsNormalList = new ArrayList<>();
             switch (chon) {
-                case 1: System.out.println("Danh sách sinh viên ứng tuyển: \n" + studentList);
+                case 1: System.out.println("Danh sách sinh viên ứng tuyển: \n" + goodStudentList + normalStudentList);
                 break;
-                case 2:
-                    for(Student student: studentList){
-                        if(student.getGradeLevel().equalsIgnoreCase("Giỏi" )|| student.getGradeLevel().equalsIgnoreCase("Khá")){
-                            studentsGoodList.add(student);
-
-                        }else {
-                            studentsNormalList.add(student);
-
+                case 2: if((goodStudentList.size()+normalStudentList.size()) <=3){
+                        System.out.println("Danh sách trúng tuyển: "+goodStudentList + normalStudentList);
+                    }else if(goodStudentList.size()<=1 && normalStudentList.size()>=3) {
+                    normalStudentList.sort(new Comparator<NormalStudent>() {
+                        @Override
+                        public int compare(NormalStudent o1, NormalStudent o2) {
+                            if (o1.getEnglishScore() < o2.getEnglishScore()) {
+                                return 1;
+                            } else if (o1.getEnglishScore() > o2.getEnglishScore()) {
+                                return -1;
+                            } else
+                                return 0;
                         }
-                    }
-                    if((studentsGoodList.size()+studentsNormalList.size()) <=15){
-                        System.out.println("Danh sách trúng tuyển: "+studentsGoodList + studentsNormalList);
-                    }else if(studentsGoodList.size()<=15) {
-                        System.out.println("Danh sách trúng tuyển: "+studentsGoodList);
-                    }
+                    });
 
+                    for(NormalStudent p : normalStudentList){
+                        System.out.println(p.getFullName());
+                    }
+                }
                 break;
                 case 0: System.exit(0);
                 break;
