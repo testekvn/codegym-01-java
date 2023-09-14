@@ -69,5 +69,7 @@ public class Cd {
     public Cd() {
         super();
     }
-
+    public void Show(){
+        System.out.println(this.toString());
+    }
 }

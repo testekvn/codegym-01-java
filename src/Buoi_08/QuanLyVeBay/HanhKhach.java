@@ -14,7 +14,6 @@ public class HanhKhach extends Person {
         this.chuyenbayList = new ArrayList<>();
     }
 
-
     //Tính tổng tiền vé đã mua
     public double tinhTienVe() {
         double tien = 0;
@@ -55,14 +54,9 @@ public class HanhKhach extends Person {
 
     @Override
     public String toString() {
-        return "HanhKhach{" +
-                "chuyenbayList=" + chuyenbayList +
-                ", soluong=" + soluong +
-                ", hoten='" + hoten + '\'' +
-                ", gioitinh='" + gioitinh + '\'' +
-                ", age=" + age +
-                '}';
+        return "HanhKhach{" + "chuyenbayList=" + chuyenbayList + ", soluong=" + soluong + ", hoten='" + hoten + '\'' + ", gioitinh='" + gioitinh + '\'' + ", age=" + age + '}';
     }
+
     public void PrintInfo() {
         Scanner sc = new Scanner(System.in);
         super.PrintInfo();

@@ -20,5 +20,6 @@ public class Main {
             System.out.println("" + e);
 
         }
+        //duyẹt vòng for để làm đặt vé
     }
 }

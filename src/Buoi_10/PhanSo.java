@@ -91,8 +91,8 @@ public class PhanSo {
     }
 
     public void chia(PhanSo ps) {
-        int ts = this.getTuSo() * ps.getTuSo();
-        int ms = this.getMauSo() * ps.getMauSo();
+        int ts = this.getTuSo() * ps.getMauSo();
+        int ms = this.getMauSo() * ps.getTuSo();
         PhanSo phanSoThuong = new PhanSo(ts, ms);
         phanSoThuong.toiGian();
         System.out.println("Thương hai phân số = " + phanSoThuong.tuSo + "/" + phanSoThuong.mauSo);
