@@ -6,10 +6,17 @@ package manageLibrary.QuanLyNhanVien;
  * Kỹ năng chuyên môn (proSkill)
  */
 public class Experience extends Employee{
-    int expInYear;
-    String proSkill;
+    int expInYear; // Số năm kinh nghiệm
+    String proSkill; // Kỹ năng chuyên môn
 
     public Experience() {}
+
+    @Override
+    public void showInfo() {
+        super.showInfo();
+        System.out.println("Số năm kinh nghiệm: " + expInYear);
+        System.out.println("Kỹ năng chuyên môn" + proSkill);
+    }
 
     public Experience(String empCode, String fullName, String doB, String email, String empType, String empCertificates, int expInYear, String proSkill) {
         super(empCode, fullName, doB, email, empType, empCertificates);

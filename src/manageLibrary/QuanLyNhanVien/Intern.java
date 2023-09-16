@@ -7,11 +7,19 @@ package manageLibrary.QuanLyNhanVien;
  * Tên trường đang học ()
  */
 public class Intern extends Employee{
-    String majors;
-    String semester;
-    String universityName;
+    String majors; // Chuyên ngành đang học
+    String semester; // Học kì đang học
+    String universityName; // Tên trường đang học
 
     public Intern() {}
+
+    @Override
+    public void showInfo() {
+        super.showInfo();
+        System.out.println("Chuyên ngành đang học: " + majors);
+        System.out.println("Học kì đang học: " + semester);
+        System.out.println("Tên trường đang học: "+ universityName);
+    }
 
     public Intern(String empCode, String fullName, String doB, String email, String empType, String empCertificates, String majors, String semester, String universityName) {
         super(empCode, fullName, doB, email, empType, empCertificates);

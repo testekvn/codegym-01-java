@@ -6,10 +6,17 @@ package manageLibrary.QuanLyNhanVien;
  * Xếp loại tốt nghiệp (graduationRank)
  */
 public class Fresher extends Employee{
-    String graduationDate;
-    String graduationRank;
+    String graduationDate; // Thời gian tốt nghiệp
+    String graduationRank; // Xếp loại tốt nghiệp
 
     public Fresher() {}
+
+    @Override
+    public void showInfo() {
+        super.showInfo();
+        System.out.println("Thời gian tốt nghiệp: " + graduationDate);
+        System.out.println("Xếp loại tốt nghiệp: " + graduationRank);
+    }
 
     @Override
     public String type() {

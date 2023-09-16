@@ -94,4 +94,13 @@ public class Employee {
     public String type(){
         return "Employee";
     }
+    public void showInfo(){
+        System.out.println("Ma nhan vien: "+empCode);
+        System.out.println("Ho ten nhan vien: "+fullName);
+        System.out.println("Ngay sinh: "+ doB);
+        System.out.println("Dia chi email nhan vien: "+email);
+        System.out.println("Phan loai nhan vien: "+empType);
+        System.out.println("Danh sach bang cap: ");
+    };
+
 }
