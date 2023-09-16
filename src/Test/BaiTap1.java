@@ -1,4 +1,4 @@
-package manageLibrary;
+package Test;
 
 public class BaiTap1 {
     public static void main(String[] args) {

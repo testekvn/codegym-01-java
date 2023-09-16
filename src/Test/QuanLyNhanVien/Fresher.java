@@ -1,4 +1,4 @@
-package manageLibrary.QuanLyNhanVien;
+package Test.QuanLyNhanVien;
 
 /**
  * Fresher có thêm thuộc tính:

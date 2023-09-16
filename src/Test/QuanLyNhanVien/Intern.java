@@ -1,4 +1,4 @@
-package manageLibrary.QuanLyNhanVien;
+package Test.QuanLyNhanVien;
 
 /**
  * Intern có thêm thuộc tính:

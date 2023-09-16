@@ -1,4 +1,4 @@
-package manageLibrary.QuanLyNhanVien;
+package Test.QuanLyNhanVien;
 
 /**
  * Công ty cần quản lý nhân viên để phục vụ đánh giá, xếp loại và khen thưởng cho nhân viên, bạn hãy phát triển chương trình chi tiết như sau:
