@@ -8,12 +8,12 @@ public class Fresher extends Employee {
     String graduationRank; //Xep loai tot nghiep
     //endregion
 
-    public Fresher(String empCode, String fullName, String doB, String email, int empType, List<Certification> certificationList, String graduationDate, String graduationRank) {
+    public Fresher(String empCode, String fullName, String doB, String email, int empType, List<Certification> certificationList, String graduationDate, String graduationRank) throws EmailRuntimException {
         super(empCode, fullName, doB, email, empType, certificationList);
         this.graduationDate = graduationDate;
         this.graduationRank = graduationRank;
     }
-
+    public Fresher(){}
     @Override
     public String toString() {
         return "Fresher{" +
@@ -31,5 +31,21 @@ public class Fresher extends Employee {
     @Override
     public void showInfo() {
         System.out.println(this.toString());
+    }
+
+    public String getGraduationDate() {
+        return graduationDate;
+    }
+
+    public void setGraduationDate(String graduationDate) {
+        this.graduationDate = graduationDate;
+    }
+
+    public String getGraduationRank() {
+        return graduationRank;
+    }
+
+    public void setGraduationRank(String graduationRank) {
+        this.graduationRank = graduationRank;
     }
 }

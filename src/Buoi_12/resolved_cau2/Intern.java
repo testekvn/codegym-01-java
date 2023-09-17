@@ -10,13 +10,13 @@ public class Intern extends Employee {
     //endregion
 
 
-    public Intern(String empCode, String fullName, String doB, String email, int empType, List<Certification> certificationList, String majors, int semester, String universityName) {
+    public Intern(String empCode, String fullName, String doB, String email, int empType, List<Certification> certificationList, String majors, int semester, String universityName) throws EmailRuntimException {
         super(empCode, fullName, doB, email, empType, certificationList);
         this.majors = majors;
         this.semester = semester;
         this.universityName = universityName;
     }
-
+    public Intern(){}
     @Override
     public String toString() {
         return "Intern{" +
@@ -35,5 +35,29 @@ public class Intern extends Employee {
     @Override
     public void showInfo() {
         System.out.println(this.toString());
+    }
+
+    public String getMajors() {
+        return majors;
+    }
+
+    public void setMajors(String majors) {
+        this.majors = majors;
+    }
+
+    public int getSemester() {
+        return semester;
+    }
+
+    public void setSemester(int semester) {
+        this.semester = semester;
+    }
+
+    public String getUniversityName() {
+        return universityName;
+    }
+
+    public void setUniversityName(String universityName) {
+        this.universityName = universityName;
     }
 }

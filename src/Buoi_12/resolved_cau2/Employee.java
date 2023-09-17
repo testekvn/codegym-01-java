@@ -21,7 +21,7 @@ public abstract class Employee {
         this.empType = empType;
         this.empCertificates = empCertificates;
     }
-
+    public Employee(){}
     //endregion
 
     //region getter and setter
@@ -74,38 +74,17 @@ public abstract class Employee {
     }
     //endregion
 
-    //Phuong thuc in ra thong tin nhan vien
+    //Phuong thuc abstract showInfo in ra thong tin nhan vien
     public abstract void showInfo();
 
 
     //kiem tra tinh hop le cua email (email phai co ky tu @)
-//    public String ValidateEmail(String email){
-//        Scanner sc = new Scanner(System.in);
-//        email = sc.nextLine();
-//        try{
-//            for (int i = 0; i < email.length(); i++){
-//                if (email.charAt(i) == '@'){
-//                    System.out.println("Email hop le");
-//                }
-//            }
-//        }catch (Exception e){
-//            System.out.println("Email khong hop le: "+e);
-//        }
-//        return email;
-//    }
-    public static String ValidateEmail(String email) throws EmailRuntimException{
+    public static String ValidateEmail(String email) throws EmailRuntimException {
         Scanner sc = new Scanner(System.in);
         email = sc.nextLine();
-        try{
-            for (int i = 0; i < email.length(); i++){
-                if (email.charAt(i) == '@'){
-                    System.out.println("The email is valid!");
-                }
-            }
+        if (email.matches("@")) {
             return email;
-        }catch (Exception e){
-            throw new EmailRuntimException("The email is invalid!");
-        }
+        } else throw new EmailRuntimException("The email is invalid!");
     }
 
     @Override

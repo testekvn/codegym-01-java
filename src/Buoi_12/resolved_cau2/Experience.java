@@ -8,12 +8,12 @@ public class Experience extends Employee {
     String proSkill;    //Ky nang chuyen mon
     //endregion
 
-    public Experience(String empCode, String fullName, String doB, String email, int empType, List<Certification> certificationList, double expInYear, String proSkill) {
+    public Experience(String empCode, String fullName, String doB, String email, int empType, List<Certification> certificationList, double expInYear, String proSkill) throws EmailRuntimException {
         super(empCode, fullName, doB, email, empType, certificationList);
         this.expInYear = expInYear;
         this.proSkill = proSkill;
     }
-
+    public Experience(){}
     @Override
     public String toString() {
         return "Experience{" +
@@ -31,5 +31,21 @@ public class Experience extends Employee {
     @Override
     public void showInfo() {
         System.out.println(this.toString());
+    }
+
+    public double getExpInYear() {
+        return expInYear;
+    }
+
+    public void setExpInYear(double expInYear) {
+        this.expInYear = expInYear;
+    }
+
+    public String getProSkill() {
+        return proSkill;
+    }
+
+    public void setProSkill(String proSkill) {
+        this.proSkill = proSkill;
     }
 }
