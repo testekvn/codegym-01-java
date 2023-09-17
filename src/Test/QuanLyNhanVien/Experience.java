@@ -13,9 +13,10 @@ public class Experience extends Employee{
 
     @Override
     public void showInfo() {
-        super.showInfo();
-        System.out.println("Số năm kinh nghiệm: " + expInYear);
-        System.out.println("Kỹ năng chuyên môn" + proSkill);
+        System.out.println(this.toString());
+//        super.showInfo();
+//        System.out.println("Số năm kinh nghiệm: " + expInYear);
+//        System.out.println("Kỹ năng chuyên môn" + proSkill);
     }
 
     public Experience(String empCode, String fullName, String doB, String email, String empType, String empCertificates, int expInYear, String proSkill) {

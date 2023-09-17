@@ -13,9 +13,10 @@ public class Fresher extends Employee{
 
     @Override
     public void showInfo() {
-        super.showInfo();
-        System.out.println("Thời gian tốt nghiệp: " + graduationDate);
-        System.out.println("Xếp loại tốt nghiệp: " + graduationRank);
+        System.out.println(this.toString());
+//        super.showInfo();
+//        System.out.println("Thời gian tốt nghiệp: " + graduationDate);
+//        System.out.println("Xếp loại tốt nghiệp: " + graduationRank);
     }
 
     @Override
